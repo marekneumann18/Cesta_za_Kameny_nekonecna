@@ -1,8 +1,8 @@
 package postavy;
 
 public class Postava {
-    private String jmeno;
-    private int zivoty;
+    protected String jmeno;
+    protected int zivoty;
     public Postava(String jmeno, int zivoty) {
         this.jmeno = jmeno;
         this.zivoty = zivoty;
