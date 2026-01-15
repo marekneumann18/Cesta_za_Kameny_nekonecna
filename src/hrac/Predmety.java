@@ -1,4 +1,4 @@
-package predmety;
+package hrac;
 
 public class Predmety {
     private String nazev;

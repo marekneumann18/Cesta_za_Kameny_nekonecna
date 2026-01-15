@@ -1,10 +1,20 @@
-package hrac;
+package Command;
 
-import predmety.Predmety;
+import hrac.Predmety;
 
 import java.util.ArrayList;
 
-public class Inventar {
+public class Inventar extends Command {
+    @Override
+    public String execute() {
+        return "";
+    }
+
+    @Override
+    public boolean exit() {
+        return false;
+    }
+
     private ArrayList<Predmety> predmety;
 
     public Inventar() {

@@ -1,10 +1,12 @@
 package Command;
 
-public class Command {
-    public  void execute(){
+public abstract class Command {
+    protected String prikaz;
 
+    public void setPrikaz(String prikaz) {
+        this.prikaz = prikaz;
     }
-    public void exit(){
 
-    }
+    public  abstract String execute();
+    public abstract boolean exit();
 }

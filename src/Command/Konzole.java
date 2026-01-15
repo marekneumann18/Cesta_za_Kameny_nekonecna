@@ -1,4 +1,7 @@
 package Command;
 
-public class Konzole extends Command {
+public class Konzole {
+   public void start(){
+
+   }
 }
