@@ -1,4 +1,4 @@
-package Command;
+package command;
 
 import hrac.Predmety;
 
@@ -20,12 +20,15 @@ public class Inventar extends Command {
     public Inventar() {
         predmety = new ArrayList<>();
     }
+
     public ArrayList<Predmety> getPredmety() {
         return predmety;
     }
+
     public void addPredmety(Predmety predmety) {
         this.predmety.add(predmety);
     }
+
     public void removePredmety(Predmety predmety) {
         this.predmety.remove(predmety);
     }

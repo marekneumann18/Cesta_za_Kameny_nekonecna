@@ -1,6 +1,6 @@
-package Command;
+package command;
 
-public class Seber extends Command {
+public class Utok extends Command {
     @Override
     public String execute() {
         return "";

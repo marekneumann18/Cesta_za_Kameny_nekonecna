@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Cesta_za_Kameny_nekonecna.iml" filepath="$PROJECT_DIR$/Cesta_za_Kameny_nekonecna.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackson-demo.iml" filepath="$PROJECT_DIR$/jackson-demo.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,6 @@
-package Command;
+package command;
 
-public class Utok extends Command {
+public class Napoveda extends Command {
     @Override
     public String execute() {
         return "";

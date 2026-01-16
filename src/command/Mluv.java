@@ -1,6 +1,6 @@
-package Command;
+package command;
 
-public class Jdi extends Command {
+public class Mluv extends Command{
     @Override
     public String execute() {
         return "";
