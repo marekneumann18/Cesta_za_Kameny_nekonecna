@@ -1,26 +1,26 @@
 package postavy;
 
 public class Postava {
-    protected String jmeno;
-    protected int zivoty;
+    protected String name;
+    protected int hp;
     public Postava(String jmeno, int zivoty) {
-        this.jmeno = jmeno;
-        this.zivoty = zivoty;
+        this.name = jmeno;
+        this.hp = zivoty;
     }
 
-    public String getJmeno() {
-        return jmeno;
+    public String getName() {
+        return name;
     }
 
-    public void setJmeno(String jmeno) {
-        this.jmeno = jmeno;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getZivoty() {
-        return zivoty;
+    public int getHp() {
+        return hp;
     }
 
-    public void setZivoty(int zivoty) {
-        this.zivoty = zivoty;
+    public void setHp(int hp) {
+        this.hp = hp;
     }
 }

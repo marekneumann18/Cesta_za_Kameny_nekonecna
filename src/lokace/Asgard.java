@@ -1,8 +1,6 @@
 package lokace;
 
-import javax.swing.*;
-
-public class Asgard extends Lokace {
+public class Asgard extends Location {
 
     public Asgard(String nazev, String popis) {
         super(nazev, popis);

@@ -1,10 +1,10 @@
 package hrac;
 
-public class Hrac {
+public class Player {
     private String jmeno;
     private int zivoty ;
 
-    public Hrac(String jmeno, int zivoty) {
+    public Player(String jmeno, int zivoty) {
         this.jmeno = jmeno;
         this.zivoty = zivoty;
     }

@@ -1,8 +1,8 @@
 package hrac;
 
-public class Predmety {
+public class Item {
     private String nazev;
-    public Predmety(String nazev) {
+    public Item(String nazev) {
         this.nazev = nazev;
     }
 

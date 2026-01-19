@@ -1,6 +1,6 @@
 package command;
 
-import hrac.Predmety;
+import hrac.Item;
 
 import java.util.ArrayList;
 
@@ -15,21 +15,21 @@ public class Inventar extends Command {
         return false;
     }
 
-    private ArrayList<Predmety> predmety;
+    private ArrayList<Item> predmety;
 
     public Inventar() {
         predmety = new ArrayList<>();
     }
 
-    public ArrayList<Predmety> getPredmety() {
+    public ArrayList<Item> getPredmety() {
         return predmety;
     }
 
-    public void addPredmety(Predmety predmety) {
+    public void addPredmety(Item predmety) {
         this.predmety.add(predmety);
     }
 
-    public void removePredmety(Predmety predmety) {
+    public void removePredmety(Item predmety) {
         this.predmety.remove(predmety);
     }
 
