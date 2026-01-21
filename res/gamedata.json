@@ -1,93 +1,129 @@
 {
   "locations": [
     {
-
       "name": "Asgard",
-      "description": "Výchozí místo a první rozhodování o směru."
-
+      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality."
     },
     {
       "name": "AvengersTower",
-      "description": "Skromné zázemí Listovníka; souvisí s úkoly a postupem ve hře."
-
+      "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců."
     },
     {
-
       "name": "Knowhere",
-      "description": "Dům podvodníka s různými cetkami."
-
+      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality."
     },
     {
       "name": "NewYorkCity",
-      "description": "Místo autority; může otevírat postup v ději."
-
+      "description": "New York je rušné město poznamenané boji s mimozemšťany."
     },
     {
       "name": "Sokovia",
-      "description": "Útulná chatrč; zde lze získat důležitý úkol."
-
+      "description": "Zničená Sokovia ukrývá Kámen mysli, ale i mnoho nebezpečí."
     },
     {
       "name": "Titan",
-      "description": "Místo pro průzkum a získání vzácného kamene."
-
+      "description": "Titan je zpustošená planeta, domov Thanose"
     },
     {
       "name": "Vormir",
-      "description": "Borůvkový porost; lze získat borůvky."
-
+      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť."
     },
     {
       "name": "Wakanda",
-      "description": "Zahrada a dílna; Gerald zde pracuje s kameny."
+      "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania."
     }
-  ],"characters": [
-  {
-
-    "name": "Captain America",
-    "hp" : 1,
-    "notes": "Doprovází hráčku napříč lokacemi a občas sám iniciuje poznámky."
-  },
-  {
-
-    "name": "Iron man",
-    "hp" : 1,
-    "notes": "Průzkumník, milovník kamenů. V jeho okolí lze získat vzácný kámen."
-  },
-  {
-    "name": "Thor",
-    "hp" : 1,
-    "notes": "Podvodník – prodává pochybné „léčivé techniky“ a různé cetky."
-  },
-  {
-    "name": "Black Panther",
-    "hp" : 1,
-    "notes": "Pomáhá s úkolem a nabízí studený nápoj při opakovaných návštěvách."
-  },
-  {
-    "name": "Obchodník",
-    "hp" : 1,
-    "notes": "Poník-ajťák; ve hře vystupuje výrazně v souvislosti s úkoly a lokacemi."
-  },
-  {
-    "name": "Armáda",
-    "hp" : 4,
-    "notes": "Respektovaná autorita; úkol může vyžadovat vzácný kámen."
-  },
-  {
-    "name": "Red skull",
-    "hp" : 1,
-    "notes": "Respektovaná autorita; úkol může vyžadovat vzácný kámen."
-  },
-  {
-    "name": "Lokiho armáda",
-    "hp" : 5,
-    "notes": "Respektovaná autorita; úkol může vyžadovat vzácný kámen."
-  },
-  {
-    "name": "Thanos",
-    "hp" : 10,
-    "notes": "Respektovaná autorita; úkol může vyžadovat vzácný kámen."
-  }
-]
+  ],
+  "characters": [
+    {
+      "id" : "captain_america",
+      "name": "Captain America",
+      "hp": 1
+    },
+    {
+      "id" : "iron_man",
+      "name": "Iron man",
+      "hp": 1
+    },
+    {
+      "id" : "thor",
+      "name": "Thor",
+      "hp": 1
+    },
+    {
+      "id" : "black_panther",
+      "name": "Black Panther",
+      "hp": 1
+    },
+    {
+      "id" : "obchodnik",
+      "name": "Obchodník",
+      "hp": 1
+    },
+    {
+      "id" : "armada",
+      "name": "Armáda",
+      "hp": 4
+    },
+    {
+      "id" : "red_skull",
+      "name": "Red Skull",
+      "hp": 1
+    },
+    {
+      "id" : "loki_armada",
+      "name": "Lokiho armáda",
+      "hp": 5
+    },
+    {
+      "id" : "thanos",
+      "name": "Thanos",
+      "hp": 10
+    }
+  ],
+  "items": [
+    {
+      "id" : "prostor",
+      "name": "Kámen prostoru"
+    },
+    {
+      "id" : "cas",
+      "name": "Kámen času"
+    },
+    {
+      "id" : "reality",
+      "name": "Kámen reality"
+    },
+    {
+      "id" : "sila",
+      "name": "Kámen síly"
+    },
+    {
+      "id" : "mysl",
+      "name": "Kámen mysli"
+    },
+    {
+      "id" : "duse",
+      "name": "Kámen duše"
+    },
+    {
+      "id" : "brneni",
+      "name": "Brnění"
+    },
+    {
+      "id" : "stit",
+      "name": "Štít Captain Ameriky"
+    },
+    {
+      "id" : "kladivo",
+      "name": "Thorovo kladivo"
+    },
+    {
+      "id" : "stormbreaker",
+      "name": "Stormbreaker"
+    },
+    {
+      "id" : "leky",
+      "name": "Léčivé předměty"
+    }
+  ]
 }
