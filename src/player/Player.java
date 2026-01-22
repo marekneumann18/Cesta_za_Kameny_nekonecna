@@ -1,15 +1,20 @@
 package player;
 
+import game.GameData;
 import location.Location;
 
 public class Player {
     private String jmeno;
     private int zivoty ;
-    private Location currentLocaion;
+    private GameData gameData;
+    private Location currentLocation;
 
-    public Player(String jmeno, int zivoty) {
+    public Player(String jmeno, int zivoty,GameData gameData) {
         this.jmeno = jmeno;
         this.zivoty = zivoty;
+        this.gameData = gameData;
+
+        this.currentLocation = getCurrentLocation();
     }
     public Player() {
 
@@ -30,11 +35,13 @@ public class Player {
     public void setZivoty(int zivoty) {
         this.zivoty = zivoty;
     }
-    public Location getCurrentLocaion() {
-        return currentLocaion;
+
+    public Location getCurrentLocation() {
+        return currentLocation;
     }
-    public void setCurrentLocaion(Location currentLocaion) {
-        this.currentLocaion = currentLocaion;
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
     }
 
     @Override
@@ -42,7 +49,7 @@ public class Player {
         return "Player{" +
                 "jmeno='" + jmeno + '\'' +
                 ", zivoty=" + zivoty +
-                ", currentLocaion=" + currentLocaion +
+                ", currentLocation=" + currentLocation +
                 '}';
     }
 }

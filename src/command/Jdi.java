@@ -1,21 +1,33 @@
 package command;
 
+import game.GameData;
+import location.Location;
 import player.Player;
 
 import java.util.Scanner;
 
 public class Jdi extends Command {
     private Player player;
+    private GameData data;
     private Scanner scanner = new Scanner(System.in);
-    public Jdi(Player player) {
+    public Jdi(Player player,GameData data) {
         this.player = player;
+        this.data = data;
     }
 
     @Override
     public String execute() {
         System.out.println("Zadej lokaci , kam se chceš přemístit");
-        String location = s
-        return "";
+        String location = scanner.next();
+        for (Location l : data.getLocations()) {
+            if (l.getName().equals(location)) {
+                player.setCurrentLocation(l);
+                System.out.println(player);
+                return "Přesouváš se do lokace " + location;
+            }
+        }
+
+        return "Taková možnost není";
     }
 
     @Override

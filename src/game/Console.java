@@ -18,7 +18,7 @@ public class Console {
         this.player = new Player();
         this.data = new GameData();
         data.loadGameDataFromResources("res/gamedata.json");
-        commands.put("jdi", new Jdi(player));
+        commands.put("jdi", new Jdi(player,data));
         commands.put("inventar", new Inventar());
         commands.put("konec hry", new KonecHry());
         commands.put("mluv", new Mluv());
@@ -42,14 +42,17 @@ public class Console {
 
     public void start() {
         inicialization();
+        System.out.println("Zadej jméno :");
+        String jmeno = scanner.next();
+        player.setJmeno(jmeno);
+        player.setCurrentLocation(data.getLocations().get(1));
+        System.out.println(player);
+
 
         try {
 
             do {
-                System.out.println("Zadej jméno :");
-                String jmno = scanner.next();
-                player.setJmeno(jmno);
-                System.out.println(player);
+
 
                 proved();
             } while (!exit);
