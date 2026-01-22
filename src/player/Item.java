@@ -1,16 +1,34 @@
 package player;
 
 public class Item {
-    private String nazev;
-    public Item(String nazev) {
-        this.nazev = nazev;
+    private String id;
+
+    private String name;
+    public Item() {
+
     }
 
-    public String getNazev() {
-        return nazev;
+    public String getId() {
+        return id;
     }
 
-    public void setNazev(String nazev) {
-        this.nazev = nazev;
+    public void setString(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", nazev='" + name + '\'' +
+                '}';
     }
 }

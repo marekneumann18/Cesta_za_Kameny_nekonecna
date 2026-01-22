@@ -1,11 +1,20 @@
 package postavy;
 
 public class Postava {
+    protected String id;
     protected String name;
     protected int hp;
-    public Postava(String jmeno, int zivoty) {
-        this.name = jmeno;
-        this.hp = zivoty;
+
+    public Postava() {
+
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -22,5 +31,14 @@ public class Postava {
 
     public void setHp(int hp) {
         this.hp = hp;
+    }
+
+    @Override
+    public String toString() {
+        return "Postava{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", hp=" + hp +
+                '}';
     }
 }

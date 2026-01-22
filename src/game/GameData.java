@@ -16,7 +16,6 @@ public class GameData {
     public ArrayList<Postava> characters = new ArrayList<>();
     public ArrayList<Location> locations = new ArrayList<>();
 
-
     public ArrayList<Item> getItems() {
         return items;
     }
@@ -28,29 +27,39 @@ public class GameData {
     public ArrayList<Location> getLocations() {
         return locations;
     }
+    //    public GameData() {
+//        items = new ArrayList<>();
+//        characters = new ArrayList<>();
+//        locations = new ArrayList<>();
+//    }
+
 
     /**
      * Loads game data from a JSON file.
+     *
      * @param resourcePath path to the resource file
      * @return a game.GameData object filled with the loaded data
      */
-    public static void loadGameDataFromResources(String resourcePath) {
-        //Vytvoření objektu pro práci s JSON souborem
+    public void loadGameDataFromResources(String resourcePath) {
+
 
         ObjectMapper parser = new ObjectMapper();
 
         try {
             InputStream input = new FileInputStream(resourcePath);
             GameData data = parser.readValue(input, GameData.class);
-            System.out.println(data);
+
+            this.locations = data.locations;
+            this.characters = data.characters;
+            this.items = data.items;
 
 
-
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("nefunguje");
         } catch (Exception e) {
             System.out.println("nefunguje !");
         }
+
 
 //     * Finds a specific location by its identifier.
 //     * @param name the identifier of the location to be found
