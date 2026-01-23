@@ -1,23 +1,35 @@
 package player;
 
+import command.Inventar;
 import game.GameData;
 import location.Location;
+
+import java.util.ArrayList;
 
 public class Player {
     private String jmeno;
     private int zivoty ;
     private GameData gameData;
     private Location currentLocation;
+    private ArrayList<String > items = new ArrayList<>();
 
     public Player(String jmeno, int zivoty,GameData gameData) {
         this.jmeno = jmeno;
         this.zivoty = zivoty;
         this.gameData = gameData;
-
         this.currentLocation = getCurrentLocation();
+
     }
     public Player() {
 
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<String> items) {
+        this.items = items;
     }
 
     public String getJmeno() {
@@ -42,6 +54,13 @@ public class Player {
 
     public void setCurrentLocation(Location currentLocation) {
         this.currentLocation = currentLocation;
+    }
+    public void addItem(String item) {
+        this.items.add(item);
+    }
+
+    public void removeItem(String item) {
+        this.items.remove(item);
     }
 
     @Override

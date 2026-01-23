@@ -9,24 +9,28 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GameData {
 
-    public ArrayList<Item> items = new ArrayList<>();
+//    public ArrayList<Item> items = new ArrayList<>();
     public ArrayList<Postava> characters = new ArrayList<>();
     public ArrayList<Location> locations = new ArrayList<>();
 
-    public ArrayList<Item> getItems() {
-        return items;
-    }
+
+//    public ArrayList<Item> getItems() {
+//        return items;
+//    }
 
     public ArrayList<Postava> getCharacters() {
         return characters;
     }
 
     public ArrayList<Location> getLocations() {
+
         return locations;
     }
+
     //    public GameData() {
 //        items = new ArrayList<>();
 //        characters = new ArrayList<>();
@@ -51,7 +55,7 @@ public class GameData {
 
             this.locations = data.locations;
             this.characters = data.characters;
-            this.items = data.items;
+            //this.items = data.items;
 
 
         } catch (FileNotFoundException e) {
@@ -79,7 +83,6 @@ public class GameData {
         return "game.GameData{" +
                 "\ncharacters=" + characters +
                 "\nlocations=" + locations +
-                "\nitems=" + items +
                 "\n}";
     }
 

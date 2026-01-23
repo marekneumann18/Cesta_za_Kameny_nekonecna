@@ -5,6 +5,7 @@ import player.Item;
 import java.util.ArrayList;
 
 public class Inventar extends Command {
+    private ArrayList<Item> items;
     @Override
     public String execute() {
         return "";
@@ -15,22 +16,22 @@ public class Inventar extends Command {
         return false;
     }
 
-    private ArrayList<Item> predmety;
+
 
     public Inventar() {
-        predmety = new ArrayList<>();
+        items = new ArrayList<>();
     }
 
-    public ArrayList<Item> getPredmety() {
-        return predmety;
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
-    public void addPredmety(Item predmety) {
-        this.predmety.add(predmety);
+    public void addItem(Item items) {
+        this.items.add(items);
     }
 
-    public void removePredmety(Item predmety) {
-        this.predmety.remove(predmety);
+    public void removeItem(Item items) {
+        this.items.remove(items);
     }
 
 }

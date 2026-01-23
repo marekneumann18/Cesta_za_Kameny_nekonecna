@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Console {
     private GameData data;
     private Player player;
+
     private HashMap<String, Command> commands;
     private boolean exit = false;
     private Scanner scanner = new Scanner(System.in);
@@ -20,11 +21,11 @@ public class Console {
         data.loadGameDataFromResources("res/gamedata.json");
         commands.put("jdi", new Jdi(player,data));
         commands.put("inventar", new Inventar());
-        commands.put("konec hry", new KonecHry());
+        commands.put("konechry", new KonecHry());
         commands.put("mluv", new Mluv());
         commands.put("napoveda", new Napoveda());
-        commands.put("pouzij", new Pouzij());
-        commands.put("seber", new Seber());
+        commands.put("pouzij", new Pouzij(player,data));
+        commands.put("seber", new Seber(player,data));
         commands.put("utok", new Utok());
     }
 
@@ -42,18 +43,18 @@ public class Console {
 
     public void start() {
         inicialization();
-        System.out.println("Zadej jméno :");
+        System.out.print("Zadej jméno: ");
         String jmeno = scanner.next();
         player.setJmeno(jmeno);
         player.setCurrentLocation(data.getLocations().get(1));
         System.out.println(player);
+        System.out.println(player.getItems());
+//        data.getLocations().get();
 
 
         try {
 
             do {
-
-
                 proved();
             } while (!exit);
         } catch (Exception e) {

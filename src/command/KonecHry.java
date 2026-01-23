@@ -3,7 +3,7 @@ package command;
 public class KonecHry extends Command {
     @Override
     public String execute() {
-        return "";
+        return "ukončil jsi hru";
     }
 
     @Override

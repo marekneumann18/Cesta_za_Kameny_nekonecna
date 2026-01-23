@@ -6,7 +6,7 @@ import player.Player;
 
 import java.util.Scanner;
 
-public class Jdi extends Command {
+public class    Jdi extends Command {
     private Player player;
     private GameData data;
     private Scanner scanner = new Scanner(System.in);
