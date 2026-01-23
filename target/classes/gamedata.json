@@ -2,35 +2,65 @@
   "locations": [
     {
       "name": "Asgard",
-      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality."
+      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.",
+      "items" : [
+        "kamen reality"
+      ]
     },
     {
       "name": "Avengers Tower",
-      "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců."
+      "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců.",
+      "items" : [
+        "kamen prostoru",
+        "pistol"
+      ]
     },
     {
       "name": "Knowhere",
-      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality."
+      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality.",
+      "items" : [
+        "kamen casu",
+        "lecive predmety"
+      ]
     },
     {
       "name": "NewYorkCity",
-      "description": "New York je rušné město poznamenané boji s mimozemšťany."
+      "description": "New York je rušné město poznamenané boji s mimozemšťany.",
+      "items" : [
+        "kamen mysli",
+        "stit"
+      ]
     },
     {
       "name": "Sokovia",
-      "description": "Zničená Sokovia ukrývá Kámen mysli, ale i mnoho nebezpečí."
+      "description": "Zničená Sokovia ukrývá Kámen mysli, ale i mnoho nebezpečí.",
+      "items" : [
+        "kamen moci",
+        "stormbreaker"
+      ]
     },
     {
       "name": "Titan",
-      "description": "Titan je zpustošená planeta, domov Thanose"
+      "description": "Titan je zpustošená planeta, domov Thanose",
+      "items" : [
+        "kamen reality"
+      ]
     },
     {
       "name": "Vormir",
-      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť."
+      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť.",
+      "items" : [
+        "kamen duse"
+      ]
     },
     {
       "name": "Wakanda",
-      "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania."
+      "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania.",
+      "items" : [
+        "brneni",
+        "thorovo kladivo"
+
+      ]
     }
   ],
   "characters": [
@@ -79,51 +109,6 @@
       "name": "Thanos",
       "hp": 10
     }
-  ],
-  "items": [
-    {
-      "id" : "prostor",
-      "name": "Kámen prostoru"
-    },
-    {
-      "id" : "cas",
-      "name": "Kámen času"
-    },
-    {
-      "id" : "reality",
-      "name": "Kámen reality"
-    },
-    {
-      "id" : "sila",
-      "name": "Kámen síly"
-    },
-    {
-      "id" : "mysl",
-      "name": "Kámen mysli"
-    },
-    {
-      "id" : "duse",
-      "name": "Kámen duše"
-    },
-    {
-      "id" : "brneni",
-      "name": "Brnění"
-    },
-    {
-      "id" : "stit",
-      "name": "Štít Captain Ameriky"
-    },
-    {
-      "id" : "kladivo",
-      "name": "Thorovo kladivo"
-    },
-    {
-      "id" : "stormbreaker",
-      "name": "Stormbreaker"
-    },
-    {
-      "id" : "leky",
-      "name": "Léčivé předměty"
-    }
   ]
+
 }
