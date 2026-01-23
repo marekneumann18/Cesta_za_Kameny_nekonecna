@@ -20,7 +20,7 @@ public class Console {
         this.data = new GameData();
         data.loadGameDataFromResources("res/gamedata.json");
         commands.put("jdi", new Jdi(player,data));
-        commands.put("inventar", new Inventar());
+        commands.put("inventar", new Inventar(player));
         commands.put("konechry", new KonecHry());
         commands.put("mluv", new Mluv());
         commands.put("napoveda", new Napoveda());

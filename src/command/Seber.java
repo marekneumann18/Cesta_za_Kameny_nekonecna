@@ -21,7 +21,7 @@ public class Seber extends Command {
     @Override
     public String execute() {
         System.out.println("Jaky predmet chces vzit");
-        String item = sc.next();
+        String item = sc.nextLine();
 
         for (Location l : data.locations) {
             if (l.getItems().contains(item)) {
@@ -35,7 +35,7 @@ public class Seber extends Command {
         }
 
 
-        return "Takovz predmet tu neni";
+        return "Takovy predmet tu neni";
     }
 
     @Override
