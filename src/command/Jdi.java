@@ -15,6 +15,10 @@ public class    Jdi extends Command {
         this.data = data;
     }
 
+    public Jdi(Player player) {
+        this.player = player;
+    }
+
     @Override
     public String execute() {
         System.out.println("Zadej lokaci , kam se chceš přemístit");
