@@ -1,6 +1,6 @@
 package postavy;
 
-public class Thanos extends Postava{
+public class Thanos extends Character {
     public Thanos() {
 
     }

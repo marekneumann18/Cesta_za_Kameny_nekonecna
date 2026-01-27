@@ -1,11 +1,11 @@
 package postavy;
 
-public class Postava {
+public class Character {
     protected String id;
     protected String name;
     protected int hp;
 
-    public Postava() {
+    public Character() {
 
     }
 

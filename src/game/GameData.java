@@ -1,20 +1,18 @@
 package game;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import player.Item;
 import location.Location;
-import postavy.Postava;
+import postavy.Character;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class GameData {
 
 //    public ArrayList<Item> items = new ArrayList<>();
-    public ArrayList<Postava> characters = new ArrayList<>();
+    public ArrayList<Character> characters = new ArrayList<>();
     public ArrayList<Location> locations = new ArrayList<>();
 
 
@@ -22,7 +20,7 @@ public class GameData {
 //        return items;
 //    }
 
-    public ArrayList<Postava> getCharacters() {
+    public ArrayList<Character> getCharacters() {
         return characters;
     }
 

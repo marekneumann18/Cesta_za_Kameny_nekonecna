@@ -26,11 +26,11 @@ public class Console {
         commands.put("napoveda", new Napoveda());
         commands.put("pouzij", new Pouzij(player,data));
         commands.put("seber", new Seber(player,data));
-        commands.put("utok", new Utok());
+        commands.put("utok", new Utok(player,data));
     }
 
     private void proved() {
-        System.out.print(">>");
+        System.out.print(">> ");
         String prikaz = scanner.next();
         prikaz = prikaz.trim().toLowerCase();
         if (commands.containsKey(prikaz)) {
@@ -45,7 +45,7 @@ public class Console {
         inicialization();
         System.out.print("Zadej jméno: ");
         String jmeno = scanner.next();
-        player.setJmeno(jmeno);
+        player.setName(jmeno);
         player.setCurrentLocation(data.getLocations().get(1));
         System.out.println(player);
         System.out.println(player.getItems());

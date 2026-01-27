@@ -1,6 +1,6 @@
 package postavy;
 
-public class Enemy extends Postava{
+public class Enemy extends Character {
     public Enemy() {
 
     }
