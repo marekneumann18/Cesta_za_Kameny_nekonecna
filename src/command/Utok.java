@@ -1,6 +1,7 @@
 package command;
 
 import game.GameData;
+import location.Location;
 import player.Player;
 import postavy.Character;
 
@@ -55,6 +56,7 @@ public class Utok extends Command {
         int ammoEnemy = 2;
         String[] volby = {"nabijeni", "strilet", "obrana"};
         System.out.println("Bojuješ s Lokiho armadou\nSystem hry: \nMas tri moznosti boje:\nnabijeni\nstrilet\nobrana ");
+        System.out.println("\nmas 2 naboje");
         boolean end = false;
         while (!end) {
             String choiseEnemy = volby[rd.nextInt(volby.length)];
@@ -64,7 +66,7 @@ public class Utok extends Command {
             while (!input) {
                 System.out.println("Zadej volbu");
                 choisePlayer = sc.next();
-                for (int j = 0; j < volby.length - 1; j++) {
+                for (int j = 0; j < volby.length; j++) {
                     if (volby[j].equals(choisePlayer)) {
                         input = true;
 
@@ -80,18 +82,9 @@ public class Utok extends Command {
                     System.out.println("Nemáš náboje! Musíš nabíjet nebo bránit.");
 
 
-                } else {
-                    ammoPlayer--;
-
                 }
             }
-            if (choiseEnemy.equals("strilet")) {
-                if (ammoEnemy == 0) {
 
-                } else {
-                    ammoEnemy--;
-                }
-            }
 
             if (choiseEnemy.equals("nabijeni")) {
                 ammoEnemy++;
@@ -99,39 +92,70 @@ public class Utok extends Command {
             if (choisePlayer.equals("nabijeni")) {
                 ammoPlayer++;
             }
-            if (ch.getHp() == 0) {
 
-                end = true;
-            }
 
             if (choisePlayer.equals("strilet") && choiseEnemy.equals("nabijeni") && ammoEnemy > 0) {
-                System.out.println("Zásah! Vyhrál hráč.");
+                ammoPlayer--;
+                System.out.println("Zásah! Ubral jsi nepriteli 1 hp.");
                 ch.setHp(ch.getHp() - 1);
             } else if (choisePlayer.equals("nabijeni") && choiseEnemy.equals("strilet") && ammoPlayer > 0) {
-                System.out.println("Zásah! Vyhrál nepřítel.");
+                ammoEnemy--;
+                System.out.println("Zásah! Ubral ti 1 hp.");
                 player.setHp(player.getHp() - 1);
-            } else if ((choisePlayer.equals("strilet") && choiseEnemy.equals("obrana")) || (choisePlayer.equals("obrana") && choiseEnemy.equals("strilet"))) {
+            } else if ((choisePlayer.equals("strilet") && choiseEnemy.equals("obrana"))) {
                 System.out.println("Střela zablokována.");
+                ammoPlayer--;
+            } else if ((choisePlayer.equals("obrana") && choiseEnemy.equals("strilet"))) {
+                System.out.println("Střela zablokována.");
+                ammoEnemy--;
+
             } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("strilet")) {
                 if (ammoPlayer == 0) {
                     System.out.println("Zásah! Vyhrál nepřítel.");
+                    ammoEnemy--;
+                    player.setHp(player.getHp() - 1);
+
 
                 } else if (ammoEnemy == 0) {
+                    System.out.println("Zasahl jsi ubral jsi mu 1 hp");
+                    ammoPlayer--;
+                    ch.setHp(ch.getHp() - 1);
 
                 } else {
                     System.out.println("Oba dva jse byli zasazeny");
+                    ammoEnemy--;
+                    ammoPlayer--;
+                    ch.setHp(ch.getHp() - 1);
+                    player.setHp(player.getHp() - 1);
+
                 }
 
 
             } else {
                 System.out.println("Nic se nestalo.");
             }
+            if (ch.getHp() == 0) {
+                System.out.println("Zabil jsi je\n");
+
+                end = true;
+            }
 
             System.out.println("Hráč náboje: " + ammoPlayer);
             System.out.println("Nepřítel náboje: " + ammoEnemy);
+            System.out.println("jeho zivoty: " + ch.getHp());
+            System.out.println("tvoje zivoty: " + player.getHp());
 
 
         }
+        System.out.println("Lezi tu kamen mysli");
+        for (Location l : gameData.locations) {
+            if (l.getName().equals("NewYorkCity")) {
+                l.addItem("kamen mysli");
+
+            }
+        }
+
+
     }
 
     public void fightSokovia() {

@@ -4,7 +4,7 @@ import player.Item;
 
 import java.util.ArrayList;
 
-public  class Location {
+public class Location {
     private String name, description;
     private ArrayList<String> items = new ArrayList<>();
 
@@ -24,8 +24,14 @@ public  class Location {
     public void setItems(ArrayList<String> items) {
         this.items = items;
     }
-    public void removeItem(String item){
+
+    public void removeItem(String item) {
         items.remove(item);
+
+    }
+
+    public void addItem(String item) {
+        items.add(item);
 
     }
 

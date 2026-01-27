@@ -14,14 +14,12 @@ public class Player {
 
     public Player(String name, int hp,GameData gameData) {
         this.name = name;
-        this.hp = hp;
+        setHp(hp);
         this.gameData = gameData;
         this.currentLocation = getCurrentLocation();
 
     }
-    public Player() {
 
-    }
 
     public ArrayList<String> getItems() {
         return items;
