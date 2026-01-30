@@ -20,7 +20,6 @@ public class Mluv extends Command {
     }
 
 
-
     @Override
     public String execute() {
         System.out.println("S kym chces mluvit");
@@ -32,15 +31,21 @@ public class Mluv extends Command {
             for (Character ch : data.getCharacters()) {
                 if (ch.getId().equalsIgnoreCase(charecter)) {
                     System.out.println(ch.getName() + ": " + ch.getDialogs().get("default"));
-                    String question = sc.next().toLowerCase();
 
-                    if (ch.getDialogs().containsKey(question)) {
-                        System.out.println(ch.getName() + ": " + ch.getDialogs().get(question));
-                    } else if (question.equalsIgnoreCase("konec")) {
-                        return "Rozhovor ukončen";
+                    boolean answer = false;
+                    while (!answer) {
+                        String question = sc.next().toLowerCase();
+                        if (ch.getDialogs().containsKey(question)) {
+                            System.out.println(ch.getName() + ": " + ch.getDialogs().get(question));
+                        } else if (question.equalsIgnoreCase("konec")) {
+                            answer = true;
+
+                        }else {
+                            System.out.println("Zadej znovu :");
+                        }
+
                     }
-
-
+                    return "Rozhovor ukončen";
 
 
                 }
@@ -49,35 +54,6 @@ public class Mluv extends Command {
 
         }
         return "Daná postava  není v místnosti nebo neexistuje";
-
-
-//        switch (player.getCurrentLocation().getName()) {
-//            case "AvengersTower" -> {
-//
-//                speakAvengerTower();
-//
-//            }
-//            case "Wakanda" -> {
-//                speakWakanda();
-//
-//            }
-//            case "Knowhere" -> {
-//                speakKnowhere();
-//
-//            }
-//            case "Asgard" -> {
-//                speakAsgard();
-//
-//            }
-//            case "NewYorkCity" -> {
-//                speakNewYorkCity();
-//
-//            }
-//            case "Vormir" -> {
-//
-//            }
-//
-//        }
 
 
     }

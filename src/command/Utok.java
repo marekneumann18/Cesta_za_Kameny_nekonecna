@@ -95,11 +95,11 @@ public class Utok extends Command {
             }
 
 
-            if (choisePlayer.equals("strilet") && choiseEnemy.equals("nabijeni") && ammoEnemy > 0) {
+            if (choisePlayer.equals("strilet") && choiseEnemy.equals("nabijeni") && ammoPlayer > 0) {
                 ammoPlayer--;
                 System.out.println("Zásah! Ubral jsi nepriteli 1 hp.");
                 ch.setHp(ch.getHp() - 1);
-            } else if (choisePlayer.equals("nabijeni") && choiseEnemy.equals("strilet") && ammoPlayer > 0) {
+            } else if (choisePlayer.equals("nabijeni") && choiseEnemy.equals("strilet") && ammoEnemy > 0) {
                 ammoEnemy--;
                 System.out.println("Zásah! Ubral ti 1 hp.");
                 player.setHp(player.getHp() - 1);
@@ -136,7 +136,7 @@ public class Utok extends Command {
                 System.out.println("Nic se nestalo.");
             }
             if (ch.getHp() == 0) {
-                System.out.println("Zabil jsi je\n");
+                System.out.println("Zabil jsi Lokiho armádu\n");
 
                 end = true;
             }

@@ -22,7 +22,7 @@ public class Seber extends Command {
     public String execute() {
         System.out.println("Jaky predmet chces vzit");
         String item = sc.nextLine();
-
+        //TODO upravit na lowercase
         for (Location l : data.locations) {
             if (l.getItems().contains(item)) {
                 player.addItem(item);

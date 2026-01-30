@@ -31,6 +31,7 @@ public class Console {
     }
 
     private void proved() {
+        System.out.println("\nZadej příkaz : (např. napoveda)");
         System.out.print(">> ");
         String prikaz = scanner.next().toLowerCase().trim().replace(" ","");
         if (commands.containsKey(prikaz)) {

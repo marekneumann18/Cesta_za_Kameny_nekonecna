@@ -77,7 +77,7 @@
         "kamen duse"
       ],
       "charactersAtLocation": [
-        "Red Skull"
+        "redskull"
       ]
     },
     {
@@ -89,7 +89,7 @@
         "thorovo kladivo"
       ],
       "charactersAtLocation": [
-        "Black Panther"
+        "blackpanther"
       ]
     }
   ],
@@ -98,7 +98,7 @@
       "id": "captainamerica",
       "name": "Captain America",
       "hp": 1,
-      "dialogy": {
+      "dialogs": {
         "default": "Vojáku! New York je pod útokem, musíme zabezpečit civilisty. S čím ti můžu pomoci? (zbran / kamen)",
         "zbran": "Můj štít ti půjčit nemůžu, ale v troskách Stark Toweru najdeš prototypy zbraní. Budou se ti hodit proti armádě venku.",
         "kamen": "Kámen mysli je v rukou Lokiho armády. Jsou v centru města. Buď opatrný, nenech se ovládnout jeho mocí!"
@@ -118,7 +118,7 @@
       "id": "thor",
       "name": "Thor",
       "hp": 1,
-      "dialogy": {
+      "dialogs": {
         "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo)",
         "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
         "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
@@ -128,7 +128,7 @@
       "id": "black_panther",
       "name": "Black Panther",
       "hp": 1,
-      "dialogy": {
+      "dialogs": {
         "default": "Wakanda tě vítá. Vidím, že tvůj boj je spravedlivý. Potřebuješ pomoc naší vědy? (brneni / vibranium)",
         "brneni": "Naše brnění z Vibrania pohlcuje kinetickou energii. V Sokovii se ti bude hodit, tamní nepřátelé neznají slitování.",
         "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna."
@@ -138,7 +138,7 @@
       "id": "obchodnik",
       "name": "Obchodník",
       "hp": 1,
-      "dialogy": {
+      "dialogs": {
         "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo)",
         "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
         "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
@@ -148,7 +148,7 @@
       "id": "armada",
       "name": "Armáda",
       "hp": 4,
-      "dialogy" : {
+      "dialogs" : {
         "default": "C"
 
       }
@@ -157,7 +157,7 @@
       "id": "red_skull",
       "name": "Red Skull",
       "hp": 1,
-      "dialogy": {
+      "dialogs": {
         "default": "Mnozí sem přicházejí, ale málokdo odchází s tím, co hledá. (kamen / hadanka)",
         "kamen": "Kámen duše vyžaduje oběť. Jsi připraven ztratit to, co miluješ?",
         "hadanka": "Poslouchej dobře: Nemá to hlas, ale křičí to. Nemá to křídla, ale létá to. Co je to? (vitr)"
@@ -167,7 +167,7 @@
       "id": "loki_armada",
       "name": "Lokiho armáda",
       "hp": 5,
-      "dialogy" : {
+      "dialogs" : {
         "default": "C"
 
       }
@@ -176,7 +176,7 @@
       "id": "thanos",
       "name": "Thanos",
       "hp": 10,
-      "dialogy": {
+      "dialogs": {
         "default": "Osud nelze oklamat. Máš všechny kameny? Ukaž mi svou sílu! (boj / konec)",
         "boj": "Zkus mě zasáhnout, pokud na to máš! Vesmír bude konečně v rovnováze.",
         "konec": "I po tvé smrti budu vědět, že jsem vyhrál. Má vize je nevyhnutelná."
