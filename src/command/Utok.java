@@ -25,7 +25,7 @@ public class Utok extends Command {
     public String execute() {
 
         switch (player.getCurrentLocation().getName()) {
-            case "NewYorkCity" -> {
+            case "New York City" -> {
                 fightNY();
 
             }
@@ -64,11 +64,12 @@ public class Utok extends Command {
 
             boolean input = false;
             while (!input) {
-                System.out.println("Zadej volbu");
+                System.out.println("Zadej volbu :");
                 choisePlayer = sc.next();
-                for (int j = 0; j < volby.length; j++) {
-                    if (volby[j].equals(choisePlayer)) {
+                for (String s : volby) {
+                    if (s.equals(choisePlayer)) {
                         input = true;
+                        break;
 
                     }
 
@@ -141,15 +142,18 @@ public class Utok extends Command {
             }
 
             System.out.println("Hráč náboje: " + ammoPlayer);
+            System.out.println("tvoje životy: " + player.getHp());
+
+            System.out.println();
             System.out.println("Nepřítel náboje: " + ammoEnemy);
-            System.out.println("jeho zivoty: " + ch.getHp());
-            System.out.println("tvoje zivoty: " + player.getHp());
+            System.out.println("jeho životy: " + ch.getHp());
+
 
 
         }
         System.out.println("Lezi tu kamen mysli");
         for (Location l : gameData.locations) {
-            if (l.getName().equals("NewYorkCity")) {
+            if (l.getName().equals("New York City")) {
                 l.addItem("kamen mysli");
 
             }

@@ -1,12 +1,23 @@
 package postavy;
 
+import java.util.HashMap;
+
 public class Character {
     protected String id;
     protected String name;
     protected int hp;
+    private HashMap<String, String> dialogs;
 
     public Character() {
 
+    }
+
+    public HashMap<String, String> getDialogs() {
+        return dialogs;
+    }
+
+    public void setDialogs(HashMap<String, String> dialogs) {
+        this.dialogs = dialogs;
     }
 
     public String getId() {

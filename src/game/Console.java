@@ -14,6 +14,7 @@ public class Console {
     private boolean exit = false;
     private Scanner scanner = new Scanner(System.in);
 
+
     public void inicialization() {
         this.commands = new HashMap<>();
         this.player = new Player("",10,data);
@@ -31,8 +32,7 @@ public class Console {
 
     private void proved() {
         System.out.print(">> ");
-        String prikaz = scanner.next();
-        prikaz = prikaz.trim().toLowerCase();
+        String prikaz = scanner.next().toLowerCase().trim().replace(" ","");
         if (commands.containsKey(prikaz)) {
             System.out.println(">> " + commands.get(prikaz).execute());
             exit = commands.get(prikaz).exit();

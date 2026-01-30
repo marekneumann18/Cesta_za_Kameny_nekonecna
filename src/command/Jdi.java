@@ -21,12 +21,13 @@ public class Jdi extends Command {
     public String execute() {
         while (true) {
             System.out.println("Zadej lokaci , kam se chceš přemístit");
-            String location = scanner.next();
+            String location = scanner.nextLine().toLowerCase().trim().replace(" ", "");
             for (Location l : data.getLocations()) {
-                if (l.getName().equals(location)) {
+                if (l.getId().equalsIgnoreCase(location)) {
                     player.setCurrentLocation(l);
                     System.out.println(player);
-                    return "Přesouváš se do lokace " + location;
+                    System.out.println( "Přesouváš se do lokace " + l.getName());
+                    return l.getDescription();
                 }
 
             }

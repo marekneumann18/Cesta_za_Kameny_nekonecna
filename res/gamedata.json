@@ -1,113 +1,186 @@
 {
   "locations": [
     {
+      "id": "asgard",
       "name": "Asgard",
       "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.",
-      "items" : [
+      "items": [
         "kamen reality"
+      ],
+      "charactersAtLocation": [
+        "thor"
       ]
     },
     {
+      "id": "avengerstower",
       "name": "Avengers Tower",
-      "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců.",
-      "items" : [
+      "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců.Nachází se zde Kámen Prostoru,pistol.Najdeš tu Iron mana",
+      "items": [
         "kamen prostoru",
         "pistol"
+      ],
+      "charactersAtLocation": [
+        "ironman"
       ]
     },
     {
+      "id": "knowhere",
       "name": "Knowhere",
       "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality.",
-      "items" : [
+      "items": [
         "kamen casu",
         "lecive predmety"
+      ],
+      "charactersAtLocation": [
+        "obchodnik"
       ]
     },
     {
-      "name": "NewYorkCity",
+      "id": "newyorkcity",
+      "name": "New York City",
       "description": "New York je rušné město poznamenané boji s mimozemšťany.",
-      "items" : [
+      "items": [
         "stit"
+      ],
+      "charactersAtLocation": [
+        "captainamerica"
       ]
     },
     {
+      "id": "sokovia",
       "name": "Sokovia",
       "description": "Zničená Sokovia ukrývá Kámen mysli, ale i mnoho nebezpečí.",
-      "items" : [
+      "items": [
         "kamen moci",
         "stormbreaker"
+      ],
+      "charactersAtLocation": [
+        ""
       ]
     },
     {
+      "id": "titan",
       "name": "Titan",
       "description": "Titan je zpustošená planeta, domov Thanose",
-      "items" : [
+      "items": [
         "kamen reality"
+      ],
+      "charactersAtLocation": [
+        "thanos"
       ]
     },
     {
+      "id": "vormir",
       "name": "Vormir",
       "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť.",
-      "items" : [
+      "items": [
         "kamen duse"
+      ],
+      "charactersAtLocation": [
+        "Red Skull"
       ]
     },
     {
+      "id": "wakanda",
       "name": "Wakanda",
       "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania.",
-      "items" : [
+      "items": [
         "brneni",
         "thorovo kladivo"
-
+      ],
+      "charactersAtLocation": [
+        "Black Panther"
       ]
     }
   ],
   "characters": [
     {
-      "id" : "captain_america",
+      "id": "captainamerica",
       "name": "Captain America",
-      "hp": 1
+      "hp": 1,
+      "dialogy": {
+        "default": "Vojáku! New York je pod útokem, musíme zabezpečit civilisty. S čím ti můžu pomoci? (zbran / kamen)",
+        "zbran": "Můj štít ti půjčit nemůžu, ale v troskách Stark Toweru najdeš prototypy zbraní. Budou se ti hodit proti armádě venku.",
+        "kamen": "Kámen mysli je v rukou Lokiho armády. Jsou v centru města. Buď opatrný, nenech se ovládnout jeho mocí!"
+      }
     },
     {
-      "id" : "iron_man",
+      "id": "ironman",
       "name": "Iron man",
-      "hp": 1
+      "hp": 1,
+      "dialogs": {
+        "default": "Zdravím tě. O čem chceš mluvit? (kameny / kod / konec)",
+        "kameny": "Kameny nekonečna jsou starší než vesmír sám. Musíme je získat dřív než Thanos!",
+        "kod": "Kód od trezoru?. Myslím že to bylo 1478"
+      }
     },
     {
-      "id" : "thor",
+      "id": "thor",
       "name": "Thor",
-      "hp": 1
+      "hp": 1,
+      "dialogy": {
+        "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo)",
+        "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
+        "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
+      }
     },
     {
-      "id" : "black_panther",
+      "id": "black_panther",
       "name": "Black Panther",
-      "hp": 1
+      "hp": 1,
+      "dialogy": {
+        "default": "Wakanda tě vítá. Vidím, že tvůj boj je spravedlivý. Potřebuješ pomoc naší vědy? (brneni / vibranium)",
+        "brneni": "Naše brnění z Vibrania pohlcuje kinetickou energii. V Sokovii se ti bude hodit, tamní nepřátelé neznají slitování.",
+        "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna."
+      }
     },
     {
-      "id" : "obchodnik",
+      "id": "obchodnik",
       "name": "Obchodník",
-      "hp": 1
+      "hp": 1,
+      "dialogy": {
+        "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo)",
+        "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
+        "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
+      }
     },
     {
-      "id" : "armada",
+      "id": "armada",
       "name": "Armáda",
-      "hp": 4
+      "hp": 4,
+      "dialogy" : {
+        "default": "C"
+
+      }
     },
     {
-      "id" : "red_skull",
+      "id": "red_skull",
       "name": "Red Skull",
-      "hp": 1
+      "hp": 1,
+      "dialogy": {
+        "default": "Mnozí sem přicházejí, ale málokdo odchází s tím, co hledá. (kamen / hadanka)",
+        "kamen": "Kámen duše vyžaduje oběť. Jsi připraven ztratit to, co miluješ?",
+        "hadanka": "Poslouchej dobře: Nemá to hlas, ale křičí to. Nemá to křídla, ale létá to. Co je to? (vitr)"
+      }
     },
     {
-      "id" : "loki_armada",
+      "id": "loki_armada",
       "name": "Lokiho armáda",
-      "hp": 5
+      "hp": 5,
+      "dialogy" : {
+        "default": "C"
+
+      }
     },
     {
-      "id" : "thanos",
+      "id": "thanos",
       "name": "Thanos",
-      "hp": 10
+      "hp": 10,
+      "dialogy": {
+        "default": "Osud nelze oklamat. Máš všechny kameny? Ukaž mi svou sílu! (boj / konec)",
+        "boj": "Zkus mě zasáhnout, pokud na to máš! Vesmír bude konečně v rovnováze.",
+        "konec": "I po tvé smrti budu vědět, že jsem vyhrál. Má vize je nevyhnutelná."
+      }
     }
   ]
-
 }

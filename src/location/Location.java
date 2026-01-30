@@ -5,12 +5,30 @@ import player.Item;
 import java.util.ArrayList;
 
 public class Location {
-    private String name, description;
+    private String id,name, description;
     private ArrayList<String> items = new ArrayList<>();
+    private ArrayList<String> charactersAtLocation = new ArrayList<>();
+
 
     public Location() {
 
 
+    }
+
+    public ArrayList<String> getCharactersAtLocation() {
+        return charactersAtLocation;
+    }
+
+    public void setCharactersAtLocation(ArrayList<String> charactersAtLocation) {
+        this.charactersAtLocation = charactersAtLocation;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -1,12 +1,16 @@
 package command;
 
 import game.GameData;
+import location.Location;
 import player.Player;
 import postavy.Character;
+
+import java.util.Scanner;
 
 public class Mluv extends Command {
     private GameData data;
     private Player player;
+    Scanner sc = new Scanner(System.in);
 
 
     public Mluv(Player player, GameData data) {
@@ -15,35 +19,66 @@ public class Mluv extends Command {
 
     }
 
+
+
     @Override
     public String execute() {
-        switch (player.getCurrentLocation().getName()) {
-            case "AvengersTower" -> {
-                speakAvengerTower();
+        System.out.println("S kym chces mluvit");
+        String charecter = sc.nextLine().toLowerCase().trim().replace(" ", "");
+        Location l = player.getCurrentLocation();
+        if (l.getCharactersAtLocation().contains(charecter)) {
 
-            }
-            case "Wakanda" -> {
-                speakWakanda();
 
-            }
-            case "Knowhere" -> {
-                speakKnowhere();
+            for (Character ch : data.getCharacters()) {
+                if (ch.getId().equalsIgnoreCase(charecter)) {
+                    System.out.println(ch.getName() + ": " + ch.getDialogs().get("default"));
+                    String question = sc.next().toLowerCase();
 
-            }
-            case "Asgard" -> {
-                speakAsgard();
+                    if (ch.getDialogs().containsKey(question)) {
+                        System.out.println(ch.getName() + ": " + ch.getDialogs().get(question));
+                    } else if (question.equalsIgnoreCase("konec")) {
+                        return "Rozhovor ukončen";
+                    }
 
-            }
-            case "NewYorkCity" -> {
-                speakNewYorkCity();
 
-            }
-            case "Vormir" -> {
+
+
+                }
 
             }
 
         }
-        return "";
+        return "Daná postava  není v místnosti nebo neexistuje";
+
+
+//        switch (player.getCurrentLocation().getName()) {
+//            case "AvengersTower" -> {
+//
+//                speakAvengerTower();
+//
+//            }
+//            case "Wakanda" -> {
+//                speakWakanda();
+//
+//            }
+//            case "Knowhere" -> {
+//                speakKnowhere();
+//
+//            }
+//            case "Asgard" -> {
+//                speakAsgard();
+//
+//            }
+//            case "NewYorkCity" -> {
+//                speakNewYorkCity();
+//
+//            }
+//            case "Vormir" -> {
+//
+//            }
+//
+//        }
+
 
     }
 
