@@ -53,7 +53,7 @@ public class GameData {
 
             this.locations = data.locations;
             this.characters = data.characters;
-            //this.items = data.items;
+
 
 
         } catch (FileNotFoundException e) {

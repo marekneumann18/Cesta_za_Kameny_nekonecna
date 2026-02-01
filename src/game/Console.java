@@ -33,7 +33,7 @@ public class Console {
     private void proved() {
         System.out.println("\nZadej příkaz : (např. napoveda)");
         System.out.print(">> ");
-        String prikaz = scanner.next().toLowerCase().trim().replace(" ","");
+        String prikaz = scanner.nextLine().toLowerCase().trim().replace(" ","");
         if (commands.containsKey(prikaz)) {
             System.out.println(">> " + commands.get(prikaz).execute());
             exit = commands.get(prikaz).exit();
@@ -45,7 +45,7 @@ public class Console {
     public void start() {
         inicialization();
         System.out.print("Zadej jméno: ");
-        String jmeno = scanner.next();
+        String jmeno = scanner.nextLine();
         player.setName(jmeno);
         player.setCurrentLocation(data.getLocations().get(1));
         System.out.println(player);

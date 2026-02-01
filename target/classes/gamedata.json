@@ -55,7 +55,7 @@
         "stormbreaker"
       ],
       "charactersAtLocation": [
-        ""
+        " "
       ]
     },
     {
@@ -99,7 +99,7 @@
       "name": "Captain America",
       "hp": 1,
       "dialogs": {
-        "default": "Vojáku! New York je pod útokem, musíme zabezpečit civilisty. S čím ti můžu pomoci? (zbran / kamen)",
+        "default": "Vojáku! New York je pod útokem, musíme zabezpečit civilisty. S čím ti můžu pomoci? (zbran / kamen / konec)",
         "zbran": "Můj štít ti půjčit nemůžu, ale v troskách Stark Toweru najdeš prototypy zbraní. Budou se ti hodit proti armádě venku.",
         "kamen": "Kámen mysli je v rukou Lokiho armády. Jsou v centru města. Buď opatrný, nenech se ovládnout jeho mocí!"
       }
@@ -119,17 +119,17 @@
       "name": "Thor",
       "hp": 1,
       "dialogs": {
-        "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo)",
+        "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo / konec)",
         "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
         "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
       }
     },
     {
-      "id": "black_panther",
+      "id": "blackpanther",
       "name": "Black Panther",
       "hp": 1,
       "dialogs": {
-        "default": "Wakanda tě vítá. Vidím, že tvůj boj je spravedlivý. Potřebuješ pomoc naší vědy? (brneni / vibranium)",
+        "default": "Wakanda tě vítá. Vidím, že tvůj boj je spravedlivý. Potřebuješ pomoc naší vědy? (brneni / vibranium / konec)",
         "brneni": "Naše brnění z Vibrania pohlcuje kinetickou energii. V Sokovii se ti bude hodit, tamní nepřátelé neznají slitování.",
         "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna."
       }
@@ -139,9 +139,9 @@
       "name": "Obchodník",
       "hp": 1,
       "dialogs": {
-        "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo)",
-        "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
-        "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
+        "default": "Vzácné zboží pro vzácné hosty... Chceš Kámen času? Všechno má svou cenu. (cena / ukol / konec)",
+        "cena": "Kámen času ti dám jen výměnou za kus Vibrania z Wakandy. Bez toho neodejdeš.",
+        "ukol": "Najdi v Wakandě technologii, kterou jinde neuvidíš, a pak se vrať. Možná se dohodneme."
       }
     },
     {
@@ -149,26 +149,26 @@
       "name": "Armáda",
       "hp": 4,
       "dialogs" : {
-        "default": "C"
+        "default": " "
 
       }
     },
     {
-      "id": "red_skull",
+      "id": "redskull",
       "name": "Red Skull",
       "hp": 1,
       "dialogs": {
-        "default": "Mnozí sem přicházejí, ale málokdo odchází s tím, co hledá. (kamen / hadanka)",
+        "default": "Mnozí sem přicházejí, ale málokdo odchází s tím, co hledá. (kamen / hadanka / konec)",
         "kamen": "Kámen duše vyžaduje oběť. Jsi připraven ztratit to, co miluješ?",
         "hadanka": "Poslouchej dobře: Nemá to hlas, ale křičí to. Nemá to křídla, ale létá to. Co je to? (vitr)"
       }
     },
     {
-      "id": "loki_armada",
+      "id": "lokiarmada",
       "name": "Lokiho armáda",
       "hp": 5,
       "dialogs" : {
-        "default": "C"
+        "default": " "
 
       }
     },
@@ -177,9 +177,9 @@
       "name": "Thanos",
       "hp": 10,
       "dialogs": {
-        "default": "Osud nelze oklamat. Máš všechny kameny? Ukaž mi svou sílu! (boj / konec)",
+        "default": "Osud nelze oklamat. Máš všechny kameny? Ukaž mi svou sílu! (boj / proslov / konec)",
         "boj": "Zkus mě zasáhnout, pokud na to máš! Vesmír bude konečně v rovnováze.",
-        "konec": "I po tvé smrti budu vědět, že jsem vyhrál. Má vize je nevyhnutelná."
+        "proslov": "I po tvé smrti budu vědět, že jsem vyhrál. Má vize je nevyhnutelná."
       }
     }
   ]
