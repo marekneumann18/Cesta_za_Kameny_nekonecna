@@ -2,9 +2,8 @@ package command;
 
 import game.GameData;
 import location.Location;
-import org.w3c.dom.ls.LSOutput;
 import player.Player;
-import postavy.Character;
+import characters.Character;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -14,43 +13,48 @@ public class Utok extends Command {
     Scanner sc = new Scanner(System.in);
     private Player player;
     private GameData gameData;
-    private boolean finished;
-    private boolean finished2;
-    private boolean finished3;
 
 
     public Utok(Player player, GameData gameData) {
         this.player = player;
         this.gameData = gameData;
-        finished = false;
-        finished2 = false;
-        finished3 = false;
+
 
     }
 
     @Override
     public String execute() {
+        Character lokiArmada = gameData.characters.get(7);
+        Character armada = gameData.characters.get(5);
+        Character thanos = gameData.characters.get(8);
 
         switch (player.getCurrentLocation().getName()) {
             case "New York City" -> {
-                if (!finished) {
-                    fightNY();
+                if (!lokiArmada.isDefeated()) {
+                    fightNY(lokiArmada);
+                } else {
+                    System.out.println("Nikdo tu už není");
                 }
 
             }
             case "Sokovia" -> {
-                if (!finished2){
-                fightSokovia();}
+                if (!armada.isDefeated()) {
+                    fightSokovia(armada);
+                } else {
+                    System.out.println("Nikdo tu už není");
+
+                }
 
 
             }
             case "Titan" -> {
-                if (!finished3) {
-                    fightTitan();
+                if (!thanos.isDefeated()) {
+                    fightTitan(thanos);
                 }
 
 
-            }default -> {
+            }
+            default -> {
                 return "V této lokaci nemůžeš bojovat";
             }
 
@@ -59,24 +63,19 @@ public class Utok extends Command {
         return "";
 
 
-
     }
 
 
-
-    public void fightNY() {
-        Character ch = gameData.characters.get(7);
+    public void fightNY(Character ch) {
 
         if (player.getItems().contains("pistol")) {
             ch.setHp(ch.getHp() - 1);
-
         }
         if (player.getItems().contains("thorovo kladivo")) {
-            ch.setHp(ch.getHp()-5);
-            //TODO dodelat hp enemy
-
+            ch.setHp(ch.getHp() - 3);
         }
         if (player.getItems().contains("stormbreaker")) {
+            ch.setHp(ch.getHp() - 5);
 
         }
         fight(ch);
@@ -112,9 +111,7 @@ public class Utok extends Command {
                     if (s.equals(choisePlayer)) {
                         input = true;
                         break;
-
                     }
-
                 }
             }
             System.out.println("Jeho volba " + choiseEnemy);
@@ -174,19 +171,6 @@ public class Utok extends Command {
             } else {
                 System.out.println("Nic se nestalo.");
             }
-            if (ch.getHp() == 0) {
-                System.out.println("Zabil jsi " + ch.getName());
-                finished= true;
-                //TODO dodelat finished
-
-
-                end = true;
-            }
-            if (player.getHp()==0){
-
-                end = true;
-            }
-
             System.out.println("Hráč náboje: " + ammoPlayer);
             System.out.println("tvoje životy: " + player.getHp());
 
@@ -195,17 +179,36 @@ public class Utok extends Command {
             System.out.println("jeho životy: " + ch.getHp());
 
 
+            if (ch.getHp() == 0) {
+                System.out.println("Zabil jsi " + ch.getName());
+                ch.setDefeated(true);
+                end = true;
+
+
+            }
+            if (player.getHp() == 0) {
+                System.out.println("Umřel jsi");
+                end = true;
+            }
+
         }
 
     }
 
-    public void fightSokovia() {
-        Character ch = gameData.characters.get(5);
+    public void fightSokovia(Character ch) {
+        if (player.getItems().contains("pistol")) {
+            ch.setHp(ch.getHp() - 1);
+        }
+        if (player.getItems().contains("thorovo kladivo")) {
+            ch.setHp(ch.getHp() - 5);
+        }
+
         fight(ch);
-        System.out.println("Lezi tu ");
+        System.out.println("Leží tu strormbreaker a kamen moci ");
         for (Location l : gameData.locations) {
             if (l.getName().equals("Sokovia")) {
                 l.addItem("stormbreaker");
+                l.addItem("kamen moci");
 
             }
         }
@@ -213,12 +216,31 @@ public class Utok extends Command {
 
     }
 
-    public void fightTitan() {
-        Character ch = gameData.characters.get(8);
-        //TODO udelat souboj titan
+    public void fightTitan(Character ch) {
+        if (player.getItems().contains("pistol")) {
+            ch.setHp(ch.getHp() - 1);
+        }
+        if (player.getItems().contains("thorovo kladivo")) {
+            ch.setHp(ch.getHp() - 3);
+        }
+        if (player.getItems().contains("stormbreaker")) {
+            ch.setHp(ch.getHp() - 5);
+
+        }
+        if(hasInfinityStones()){
+            ch.setHp(ch.getHp() - 20);
+        }
+        fight(ch);
+        //TODO dodelat fight Thanos
 
 
     }
+
+    public boolean hasInfinityStones() {
+        return player.getItems().contains("kamen moci") && player.getItems().contains("kamen reality") && player.getItems().contains("kamen casu") && player.getItems().contains("kamen duse") && player.getItems().contains("kamen prostoru") && player.getItems().contains("kamen mysli");
+    }
+
+
     @Override
     public boolean exit() {
         return false;

@@ -2,7 +2,7 @@ package game;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import location.Location;
-import postavy.Character;
+import characters.Character;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

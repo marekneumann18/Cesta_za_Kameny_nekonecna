@@ -1,11 +1,12 @@
-package postavy;
+package characters;
 
 import java.util.HashMap;
 
 public class Character {
-    protected String id;
-    protected String name;
-    protected int hp;
+    private String id;
+    private String name;
+    private int hp;
+    private boolean isDefeated = false;
     private HashMap<String, String> dialogs;
 
     public Character() {
@@ -42,6 +43,14 @@ public class Character {
 
     public void setHp(int hp) {
         this.hp = hp;
+    }
+
+    public boolean isDefeated() {
+        return isDefeated;
+    }
+
+    public void setDefeated(boolean defeated) {
+        isDefeated = defeated;
     }
 
     @Override
