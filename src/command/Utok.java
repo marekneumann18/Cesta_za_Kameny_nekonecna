@@ -2,6 +2,7 @@ package command;
 
 import game.GameData;
 import location.Location;
+import org.w3c.dom.ls.LSOutput;
 import player.Player;
 import postavy.Character;
 
@@ -9,15 +10,21 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Utok extends Command {
-    private Player player;
-    private GameData gameData;
     Random rd = new Random();
     Scanner sc = new Scanner(System.in);
+    private Player player;
+    private GameData gameData;
+    private boolean finished;
+    private boolean finished2;
+    private boolean finished3;
 
 
     public Utok(Player player, GameData gameData) {
         this.player = player;
         this.gameData = gameData;
+        finished = false;
+        finished2 = false;
+        finished3 = false;
 
     }
 
@@ -26,36 +33,71 @@ public class Utok extends Command {
 
         switch (player.getCurrentLocation().getName()) {
             case "New York City" -> {
-                fightNY();
+                if (!finished) {
+                    fightNY();
+                }
 
             }
             case "Sokovia" -> {
+                if (!finished2){
+                fightSokovia();}
 
 
             }
             case "Titan" -> {
+                if (!finished3) {
+                    fightTitan();
+                }
 
 
+            }default -> {
+                return "V této lokaci nemůžeš bojovat";
             }
+
 
         }
         return "";
 
 
+
     }
 
-    @Override
-    public boolean exit() {
-        return false;
-    }
+
 
     public void fightNY() {
         Character ch = gameData.characters.get(7);
-        System.out.println(ch.getHp());
+
+        if (player.getItems().contains("pistol")) {
+            ch.setHp(ch.getHp() - 1);
+
+        }
+        if (player.getItems().contains("thorovo kladivo")) {
+            ch.setHp(ch.getHp()-5);
+            //TODO dodelat hp enemy
+
+        }
+        if (player.getItems().contains("stormbreaker")) {
+
+        }
+        fight(ch);
+
+        System.out.println("Lezi tu kamen mysli");
+        for (Location l : gameData.locations) {
+            if (l.getName().equals("New York City")) {
+                l.addItem("kamen mysli");
+
+            }
+        }
+
+
+    }
+
+    public void fight(Character ch) {
         int ammoPlayer = 2;
         int ammoEnemy = 2;
         String[] volby = {"nabijeni", "strilet", "obrana"};
-        System.out.println("Bojuješ s Lokiho armadou\nSystem hry: \nMas tri moznosti boje:\nnabijeni\nstrilet\nobrana ");
+        System.out.println("Bojuješ proti " + ch.getName());
+        System.out.println("\nSystem hry: \nMas tri moznosti boje:\nnabijeni\nstrilet\nobrana ");
         System.out.println("\nmas 2 naboje");
         boolean end = false;
         while (!end) {
@@ -116,7 +158,6 @@ public class Utok extends Command {
                     ammoEnemy--;
                     player.setHp(player.getHp() - 1);
 
-
                 } else if (ammoEnemy == 0) {
                     System.out.println("Zasahl jsi ubral jsi mu 1 hp");
                     ammoPlayer--;
@@ -128,15 +169,20 @@ public class Utok extends Command {
                     ammoPlayer--;
                     ch.setHp(ch.getHp() - 1);
                     player.setHp(player.getHp() - 1);
-
                 }
-
 
             } else {
                 System.out.println("Nic se nestalo.");
             }
             if (ch.getHp() == 0) {
-                System.out.println("Zabil jsi Lokiho armádu\n");
+                System.out.println("Zabil jsi " + ch.getName());
+                finished= true;
+                //TODO dodelat finished
+
+
+                end = true;
+            }
+            if (player.getHp()==0){
 
                 end = true;
             }
@@ -149,12 +195,17 @@ public class Utok extends Command {
             System.out.println("jeho životy: " + ch.getHp());
 
 
-
         }
-        System.out.println("Lezi tu kamen mysli");
+
+    }
+
+    public void fightSokovia() {
+        Character ch = gameData.characters.get(5);
+        fight(ch);
+        System.out.println("Lezi tu ");
         for (Location l : gameData.locations) {
-            if (l.getName().equals("New York City")) {
-                l.addItem("kamen mysli");
+            if (l.getName().equals("Sokovia")) {
+                l.addItem("stormbreaker");
 
             }
         }
@@ -162,18 +213,14 @@ public class Utok extends Command {
 
     }
 
-    public void fightSokovia() {
-        Character ch = gameData.characters.get(5);
-        //TODO idelat souboj v sokovii
-        int ammoPlayer = 2;
-
-    }
-
     public void fightTitan() {
         Character ch = gameData.characters.get(8);
         //TODO udelat souboj titan
-        int ammoPlayer = 2;
+
 
     }
-
+    @Override
+    public boolean exit() {
+        return false;
+    }
 }

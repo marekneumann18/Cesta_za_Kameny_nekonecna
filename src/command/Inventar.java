@@ -8,9 +8,15 @@ import java.util.ArrayList;
 public class Inventar extends Command {
     private ArrayList<Item> items;
     private Player player;
-    public Inventar (Player player) {
+
+    public Inventar(Player player) {
         this.player = player;
     }
+
+    public Inventar() {
+        items = new ArrayList<>();
+    }
+
     @Override
     public String execute() {
         return "Tvůj inventar : " + player.getItems();
@@ -19,12 +25,6 @@ public class Inventar extends Command {
     @Override
     public boolean exit() {
         return false;
-    }
-
-
-
-    public Inventar() {
-        items = new ArrayList<>();
     }
 
     public ArrayList<Item> getItems() {

@@ -17,23 +17,23 @@ public class Console {
 
     public void inicialization() {
         this.commands = new HashMap<>();
-        this.player = new Player("",10,data);
+        this.player = new Player("", 10, data);
         this.data = new GameData();
         data.loadGameDataFromResources("res/gamedata.json");
-        commands.put("jdi", new Jdi(player,data));
+        commands.put("jdi", new Jdi(player, data));
         commands.put("inventar", new Inventar(player));
         commands.put("konechry", new KonecHry());
-        commands.put("mluv", new Mluv(player,data));
+        commands.put("mluv", new Mluv(player, data));
         commands.put("napoveda", new Napoveda());
-        commands.put("pouzij", new Pouzij(player,data));
-        commands.put("seber", new Seber(player,data));
-        commands.put("utok", new Utok(player,data));
+        commands.put("pouzij", new Pouzij(player, data));
+        commands.put("seber", new Seber(player, data));
+        commands.put("utok", new Utok(player, data));
     }
 
     private void proved() {
         System.out.println("\nZadej příkaz : (např. napoveda)");
         System.out.print(">> ");
-        String prikaz = scanner.nextLine().toLowerCase().trim().replace(" ","");
+        String prikaz = scanner.nextLine().toLowerCase().trim().replace(" ", "");
         if (commands.containsKey(prikaz)) {
             System.out.println(">> " + commands.get(prikaz).execute());
             exit = commands.get(prikaz).exit();

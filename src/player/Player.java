@@ -10,9 +10,9 @@ public class Player {
     private int hp;
     private GameData gameData;
     private Location currentLocation;
-    private ArrayList<String > items = new ArrayList<>();
+    private ArrayList<String> items = new ArrayList<>();
 
-    public Player(String name, int hp,GameData gameData) {
+    public Player(String name, int hp, GameData gameData) {
         this.name = name;
         setHp(hp);
         this.gameData = gameData;
@@ -52,6 +52,7 @@ public class Player {
     public void setCurrentLocation(Location currentLocation) {
         this.currentLocation = currentLocation;
     }
+
     public void addItem(String item) {
         this.items.add(item);
     }

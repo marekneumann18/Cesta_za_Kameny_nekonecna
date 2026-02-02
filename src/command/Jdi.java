@@ -26,7 +26,7 @@ public class Jdi extends Command {
                 if (l.getId().equalsIgnoreCase(location)) {
                     player.setCurrentLocation(l);
                     System.out.println(player);
-                    System.out.println( "Přesouváš se do lokace " + l.getName());
+                    System.out.println("Přesouváš se do lokace " + l.getName());
                     return l.getDescription();
                 }
 

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class GameData {
 
-//    public ArrayList<Item> items = new ArrayList<>();
+    //    public ArrayList<Item> items = new ArrayList<>();
     public ArrayList<Character> characters = new ArrayList<>();
     public ArrayList<Location> locations = new ArrayList<>();
 
@@ -53,7 +53,6 @@ public class GameData {
 
             this.locations = data.locations;
             this.characters = data.characters;
-
 
 
         } catch (FileNotFoundException e) {

@@ -1,11 +1,9 @@
 package location;
 
-import player.Item;
-
 import java.util.ArrayList;
 
 public class Location {
-    private String id,name, description;
+    private String id, name, description;
     private ArrayList<String> items = new ArrayList<>();
     private ArrayList<String> charactersAtLocation = new ArrayList<>();
 
@@ -35,6 +33,10 @@ public class Location {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public ArrayList<String> getItems() {
         return items;
     }
@@ -55,10 +57,6 @@ public class Location {
 
     public String getDescription() {
         return description;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setDescription(String description) {

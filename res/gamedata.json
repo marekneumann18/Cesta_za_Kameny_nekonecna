@@ -147,7 +147,7 @@
     {
       "id": "armada",
       "name": "Armáda",
-      "hp": 4,
+      "hp": 20,
       "dialogs" : {
         "default": " "
 
@@ -175,7 +175,7 @@
     {
       "id": "thanos",
       "name": "Thanos",
-      "hp": 10,
+      "hp": 50,
       "dialogs": {
         "default": "Osud nelze oklamat. Máš všechny kameny? Ukaž mi svou sílu! (boj / proslov / konec)",
         "boj": "Zkus mě zasáhnout, pokud na to máš! Vesmír bude konečně v rovnováze.",

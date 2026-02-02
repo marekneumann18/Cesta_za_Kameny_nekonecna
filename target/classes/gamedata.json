@@ -166,7 +166,7 @@
     {
       "id": "lokiarmada",
       "name": "Lokiho armáda",
-      "hp": 5,
+      "hp": 2,
       "dialogs" : {
         "default": " "
 

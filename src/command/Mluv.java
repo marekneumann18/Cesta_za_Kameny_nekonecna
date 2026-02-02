@@ -8,9 +8,9 @@ import postavy.Character;
 import java.util.Scanner;
 
 public class Mluv extends Command {
+    Scanner sc = new Scanner(System.in);
     private GameData data;
     private Player player;
-    Scanner sc = new Scanner(System.in);
 
 
     public Mluv(Player player, GameData data) {
@@ -23,7 +23,7 @@ public class Mluv extends Command {
     @Override
     public String execute() {
         System.out.println("S kym chces mluvit");
-        String charecter = sc.nextLine().toLowerCase().trim().replace(" ", "");
+        String charecter = sc.nextLine().toLowerCase().trim();
         Location l = player.getCurrentLocation();
         if (l.getCharactersAtLocation().contains(charecter)) {
 
@@ -40,7 +40,7 @@ public class Mluv extends Command {
                         } else if (question.equalsIgnoreCase("konec")) {
                             answer = true;
 
-                        }else {
+                        } else {
                             System.out.println("Zadej znovu :");
                         }
 

@@ -7,10 +7,10 @@ import player.Player;
 import java.util.Scanner;
 
 public class Seber extends Command {
+    Scanner sc = new Scanner(System.in);
     private Player player;
     private GameData data;
     private Location location;
-    Scanner sc = new Scanner(System.in);
 
     public Seber(Player player, GameData data) {
         this.player = player;
