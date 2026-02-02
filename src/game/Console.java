@@ -17,7 +17,7 @@ public class Console {
 
     public void inicialization() {
         this.commands = new HashMap<>();
-        this.player = new Player("", 10, data);
+        this.player = new Player("", 20, data);
         this.data = new GameData();
         data.loadGameDataFromResources("res/gamedata.json");
         commands.put("jdi", new Jdi(player, data));
