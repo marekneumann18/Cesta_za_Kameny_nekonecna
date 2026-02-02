@@ -54,7 +54,12 @@ public class Player {
     }
 
     public void addItem(String item) {
-        this.items.add(item);
+        if (items.size() < 8) {
+            this.items.add(item);
+        }else  {
+            System.out.println("Item nemůžeš přidat je plný");
+        }
+
     }
 
     public void removeItem(String item) {
