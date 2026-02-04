@@ -191,13 +191,14 @@ public class Utok extends Command {
             }
             if (player.getHp() == 0) {
                 System.out.println("Umřel jsi");
-                player.setHp(20);
+
                 end = true;
             }
 
         }
 
     }
+
 
     public void fightSokovia(Character ch) {
         if (player.getItems().contains("pistol")) {
@@ -249,6 +250,11 @@ public class Utok extends Command {
 
     @Override
     public boolean exit() {
-        return false;
+        if (player.getHp() == 0){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 }

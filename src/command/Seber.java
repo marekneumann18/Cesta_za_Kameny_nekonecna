@@ -35,7 +35,7 @@ public class Seber extends Command {
         }
 
 
-        return "Takovy predmet tu neni";
+        return "Takový předmět tu není";
     }
 
     @Override

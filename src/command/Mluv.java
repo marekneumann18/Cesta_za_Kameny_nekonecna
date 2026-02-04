@@ -58,7 +58,6 @@ public class Mluv extends Command {
                                 }else {
                                     System.out.println("Kámen už máš.");
                                 }
-
                                 answer = true;
 
                             } else if (ch.getId().equalsIgnoreCase("blackpanther")  ) {
