@@ -17,6 +17,7 @@ public class Inventar extends Command {
         items = new ArrayList<>();
     }
 
+
     @Override
     public String execute() {
         return "Tvůj inventar : " + player.getItems();
