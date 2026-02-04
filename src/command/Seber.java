@@ -21,15 +21,17 @@ public class Seber extends Command {
     @Override
     public String execute() {
         System.out.println("Jaky predmet chces vzit");
-        String item = sc.nextLine().toLowerCase();
+        String item = sc.nextLine().toLowerCase().replaceAll(" ", "");
 
         for (Location l : data.locations) {
             if (l.getItems().contains(item)) {
-                player.addItem(item);
-                l.removeItem(item);
-                System.out.println(l);
-                System.out.println(player.getItems());
-                return "předmět byl přidan";
+                if (player.getCurrentLocation().equals(l)) {
+                    player.addItem(item);
+                    l.removeItem(item);
+                    System.out.println(player.getItems());
+                    return "předmět byl přidan";
+                }
+
 
             }
         }

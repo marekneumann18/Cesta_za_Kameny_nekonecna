@@ -145,10 +145,10 @@ public class Utok extends Command {
                 ammoEnemy--;
                 System.out.println("Zásah! Ubral ti 1 hp.");
                 player.setHp(player.getHp() - 1);
-            } else if ((choisePlayer.equals("strilet") && choiseEnemy.equals("obrana"))) {
+            } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("obrana")&& ammoPlayer > 0) {
                 System.out.println("Střela zablokována.");
                 ammoPlayer--;
-            } else if ((choisePlayer.equals("obrana") && choiseEnemy.equals("strilet"))) {
+            } else if (choisePlayer.equals("obrana") && choiseEnemy.equals("strilet")&& ammoEnemy > 0) {
                 System.out.println("Střela zablokována.");
                 ammoEnemy--;
 
