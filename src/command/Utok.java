@@ -79,14 +79,17 @@ public class Utok extends Command {
 
         }
         fight(ch);
+        if (ch.isDefeated()) {
+            System.out.println("Lezi tu kamen mysli");
+            for (Location l : gameData.locations) {
+                if (l.getName().equals("New York City")) {
+                    l.addItem("kamen mysli");
 
-        System.out.println("Lezi tu kamen mysli");
-        for (Location l : gameData.locations) {
-            if (l.getName().equals("New York City")) {
-                l.addItem("kamen mysli");
-
+                }
             }
         }
+
+
 
 
     }
@@ -188,6 +191,7 @@ public class Utok extends Command {
             }
             if (player.getHp() == 0) {
                 System.out.println("Umřel jsi");
+                player.setHp(20);
                 end = true;
             }
 
@@ -204,12 +208,14 @@ public class Utok extends Command {
         }
 
         fight(ch);
-        System.out.println("Leží tu strormbreaker a kamen moci ");
-        for (Location l : gameData.locations) {
-            if (l.getName().equals("Sokovia")) {
-                l.addItem("stormbreaker");
-                l.addItem("kamen moci");
+        if (ch.isDefeated()) {
+            System.out.println("Leží tu stormbreaker a kamen moci ");
+            for (Location l : gameData.locations) {
+                if (l.getName().equals("Sokovia")) {
+                    l.addItem("stormbreaker");
+                    l.addItem("kamen moci");
 
+                }
             }
         }
 
