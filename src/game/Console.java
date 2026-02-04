@@ -17,7 +17,7 @@ public class Console {
 
     public void inicialization() {
         this.commands = new HashMap<>();
-        this.player = new Player("", 2, data);
+        this.player = new Player("", 20, data);
         this.data = new GameData();
         data.loadGameDataFromResources("res/gamedata.json");
         commands.put("jdi", new Jdi(player, data));
@@ -31,9 +31,10 @@ public class Console {
     }
 
     private void proved() {
-        System.out.println("\nZadej příkaz : (např. napoveda)");
+        System.out.println();
+        System.out.println("Zadej příkaz : (např. napoveda)");
         System.out.print(">> ");
-        String prikaz = scanner.nextLine().toLowerCase().trim();
+        String prikaz = scanner.nextLine().toLowerCase().replace(" ","");
         if (commands.containsKey(prikaz)) {
             System.out.println(">> " + commands.get(prikaz).execute());
             exit = commands.get(prikaz).exit();

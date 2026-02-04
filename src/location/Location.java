@@ -1,16 +1,27 @@
 package location;
 
+import player.Player;
+
 import java.util.ArrayList;
 
 public class Location {
     private String id, name, description;
     private ArrayList<String> items = new ArrayList<>();
     private ArrayList<String> charactersAtLocation = new ArrayList<>();
+    private ArrayList<String> uses = new ArrayList<>();
 
 
     public Location() {
 
 
+    }
+
+    public ArrayList<String> getUses() {
+        return uses;
+    }
+
+    public void setUses(ArrayList<String> uses) {
+        this.uses = uses;
     }
 
     public ArrayList<String> getCharactersAtLocation() {

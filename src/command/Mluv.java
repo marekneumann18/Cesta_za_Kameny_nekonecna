@@ -23,7 +23,7 @@ public class Mluv extends Command {
     @Override
     public String execute() {
         System.out.println("S kym chces mluvit");
-        String character = sc.nextLine().toLowerCase().trim();
+        String character = sc.nextLine().toLowerCase().replaceAll(" ", "");
         Location l = player.getCurrentLocation();
         if (l.getCharactersAtLocation().contains(character)) {
 
@@ -34,65 +34,71 @@ public class Mluv extends Command {
 
                     boolean answer = false;
                     while (!answer) {
-                        String question = sc.next().toLowerCase();
+                        String question = sc.nextLine().toLowerCase().replaceAll(" ", "");
                         if (ch.getDialogs().containsKey(question)) {
                             System.out.println(ch.getName() + ": " + ch.getDialogs().get(question));
                             if (ch.getId().equalsIgnoreCase("captainamerica") && question.equalsIgnoreCase("zbran")) {
                                 if (!player.getItems().contains("stit")) {
                                     l.addItem("stit");
-                                    System.out.println("[INFO]: Captain America položil na zem svůj starý štít. Teď ho můžeš sebrat.");
+                                    System.out.println("[INFO]: Captain America položil na zem svůj štít. Teď ho můžeš sebrat.");
                                 }
 
                             } else if (ch.getId().equalsIgnoreCase("redskull") && question.equalsIgnoreCase("hadanka")) {
-                                if (!player.getItems().contains("kamen duse")) {
+                                if (!player.getItems().contains("kamenduse")) {
                                     String answerMystery = sc.next().toLowerCase();
-                                    if (answerMystery.equals("procesor ") || answerMystery.equals("cpu")) {
-                                        l.addItem("kamen duse");
+                                    if (answerMystery.equals("procesor") || answerMystery.equals("cpu")) {
+                                        l.addItem("kamenduse");
                                         System.out.println("Správně");
                                         System.out.println("Kámen duše leží na zemi před tebou");
 
 
-                                    }else{
+                                    } else {
                                         System.out.println("špatná odpověď.Zkus to třeba příště");
                                     }
-                                }else {
+                                } else {
+                                    System.out.println();
                                     System.out.println("Kámen už máš.");
                                 }
                                 answer = true;
 
-                            } else if (ch.getId().equalsIgnoreCase("blackpanther")  ) {
+                            } else if (ch.getId().equalsIgnoreCase("blackpanther")) {
 
-                               if (question.equalsIgnoreCase("brneni")) {
-                                   if (!player.getItems().contains("brneni")) {
-                                       l.addItem("brneni");
+                                if (question.equals("brneni")) {
+                                    if (!player.getItems().contains("brneni")) {
+                                        l.addItem("brneni");
 
-                                   }
+                                    }
 
-                               } else if (question.equalsIgnoreCase("vibranium")) {
-                                   if (!player.getItems().contains("thorovo kladivo")) {
-                                       String answerMystery2 = sc.next();
-                                       if (answerMystery2.equals("1")) {
-                                           System.out.println("Správně");
-                                           l.addItem("thorovo kladivo");
-                                           System.out.println("Thorovo kladivo zde leží");
+                                } else if (question.equals("vibranium")) {
+                                    if (!player.getItems().contains("thorovokladivo")) {
+                                        String answerMystery2 = sc.nextLine();
+                                        if (answerMystery2.equals("1")) {
+                                            System.out.println("Správně");
+                                            l.addItem("thorovokladivo");
+                                            System.out.println("Thorovo kladivo zde leží");
 
-                                       }else{
-                                           System.out.println("špatná odpověď");
-                                       }
-                                   }else {
-                                       System.out.println("Už jsi tady byl.");
-                                   }
+                                        } else {
+                                            System.out.println("špatná odpověď");
+                                        }
+                                    } else {
+                                        System.out.println("Už jsi tady byl.");
+                                    }
 
-                                   answer = true;
-                               }
+                                    answer = true;
+                                }
 
 
-                            } else if (ch.getId().equalsIgnoreCase("obchodnik") && question.equalsIgnoreCase("ukol")) {
-                                if(player.getItems().contains("brneni")){
-                                    System.out.println("Výborně našel jsi brnění");
-                                    System.out.println("Děkuji že jsi mi ho přinesl\nTady máš kámen času");
-                                    l.addItem("kamen casu");
-                                    player.removeItem("brneni");
+                            } else if (ch.getId().equalsIgnoreCase("obchodnik") ) {
+                                if (question.equals("ukol")) {
+                                    if (player.getItems().contains("brneni")) {
+                                        System.out.println("Výborně našel jsi brnění");
+                                        System.out.println("Děkuji že jsi mi ho přinesl\nTady máš kámen času");
+                                        l.addItem("kamencasu");
+                                        player.removeItem("brneni");
+                                    }
+                                } else if (question.equals("leky")) {
+                                    l.addItem("leky");
+
                                 }
 
 
@@ -117,8 +123,6 @@ public class Mluv extends Command {
 
 
     }
-
-
 
 
     @Override
