@@ -50,7 +50,8 @@ public class Console {
         player.setCurrentLocation(data.getLocations().get(1));
         System.out.println(player);
         System.out.println(player.getItems());
-//        data.getLocations().get();
+        System.out.println("Nacházíš se v " + player.getCurrentLocation().getName());
+        System.out.println(player.getCurrentLocation().getDescription());
 
 
         try {

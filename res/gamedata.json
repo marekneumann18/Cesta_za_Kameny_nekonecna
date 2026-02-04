@@ -3,7 +3,7 @@
     {
       "id": "asgard",
       "name": "Asgard",
-      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.",
+      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.Najdeš tu Thora",
       "items": [
         "kamen reality"
       ],
@@ -17,7 +17,7 @@
       "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců.Nachází se zde Kámen Prostoru,pistol.Najdeš tu Iron mana",
       "items": [
         "kamen prostoru"
-        //"pistol"
+
       ],
       "charactersAtLocation": [
         "ironman"
@@ -26,9 +26,8 @@
     {
       "id": "knowhere",
       "name": "Knowhere",
-      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality.",
+      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality.Najdeš tu obchodnika",
       "items": [
-        "kamen casu",
         "lecive predmety"
       ],
       "charactersAtLocation": [
@@ -40,8 +39,7 @@
       "name": "New York City",
       "description": "New York je rušné město poznamenané boji s mimozemšťany.",
       "items": [
-        //"stit"
-        //"kamen mysli"
+
       ],
       "charactersAtLocation": [
         "captainamerica"
@@ -50,13 +48,12 @@
     {
       "id": "sokovia",
       "name": "Sokovia",
-      "description": "Zničená Sokovia ukrývá Kámen mysli, ale i mnoho nebezpečí.",
+      "description": "Zničená Sokovia ukrývá Kámen moci, ale i mnoho nebezpečí.",
       "items": [
-        //"kamen moci",
-        //"stormbreaker"
+
       ],
       "charactersAtLocation": [
-        " "
+
       ]
     },
     {
@@ -73,9 +70,9 @@
     {
       "id": "vormir",
       "name": "Vormir",
-      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť.",
+      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť.Najdeš tu Red Skulla",
       "items": [
-       // "kamen duse"
+
       ],
       "charactersAtLocation": [
         "redskull"
@@ -86,8 +83,7 @@
       "name": "Wakanda",
       "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania.",
       "items": [
-        //"brneni",
-        //"thorovo kladivo"
+
       ],
       "charactersAtLocation": [
         "blackpanther"
@@ -132,7 +128,7 @@
       "dialogs": {
         "default": "Wakanda tě vítá. Vidím, že tvůj boj je spravedlivý. Potřebuješ pomoc naší vědy? (brneni / vibranium / konec)",
         "brneni": "Naše brnění z Vibrania pohlcuje kinetickou energii. V Sokovii se ti bude hodit, tamní nepřátelé neznají slitování.",
-        "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna.Můžu ti ještě dát Thorovo kladivo , ale budeš muset vyřešit příklad :\n(sin x)² + (cos x)² ="
+        "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna.Můžu ti ještě dát Thorovo kladivo , ale budeš muset vyřešit příklad :\nsin² x + cos² x = "
       }
     },
     {
@@ -142,7 +138,7 @@
       "dialogs": {
         "default": "Vzácné zboží pro vzácné hosty... Chceš Kámen času? Všechno má svou cenu. (cena / ukol / konec)",
         "cena": "Kámen času ti dám jen výměnou za kus Vibrania z Wakandy. Bez toho neodejdeš.",
-        "ukol": "Najdi v Wakandě technologii, kterou jinde neuvidíš, a pak se vrať. Možná se dohodneme.  (napověda až ho budeš mít tak se sem vrať a použij příkaz Použij <predmet>"
+        "ukol": "Najdi v Wakandě technologii, kterou jinde neuvidíš, a pak se vrať. Možná se dohodneme."
       }
     },
     {
