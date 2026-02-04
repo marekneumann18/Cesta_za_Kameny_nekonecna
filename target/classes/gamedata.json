@@ -3,7 +3,7 @@
     {
       "id": "asgard",
       "name": "Asgard",
-      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.",
+      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.Najdeš tu Thora",
       "items": [
         "kamen reality"
       ],
@@ -16,8 +16,8 @@
       "name": "Avengers Tower",
       "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců.Nachází se zde Kámen Prostoru,pistol.Najdeš tu Iron mana",
       "items": [
-        "kamen prostoru",
-        "pistol"
+        "kamen prostoru"
+
       ],
       "charactersAtLocation": [
         "ironman"
@@ -26,9 +26,8 @@
     {
       "id": "knowhere",
       "name": "Knowhere",
-      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality.",
+      "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen reality.Najdeš tu obchodnika",
       "items": [
-        "kamen casu",
         "lecive predmety"
       ],
       "charactersAtLocation": [
@@ -40,7 +39,7 @@
       "name": "New York City",
       "description": "New York je rušné město poznamenané boji s mimozemšťany.",
       "items": [
-        "stit"
+
       ],
       "charactersAtLocation": [
         "captainamerica"
@@ -49,21 +48,20 @@
     {
       "id": "sokovia",
       "name": "Sokovia",
-      "description": "Zničená Sokovia ukrývá Kámen mysli, ale i mnoho nebezpečí.",
+      "description": "Zničená Sokovia ukrývá Kámen moci, ale i mnoho nebezpečí.",
       "items": [
-        "kamen moci",
-        "stormbreaker"
+
       ],
       "charactersAtLocation": [
-        " "
+
       ]
     },
     {
       "id": "titan",
       "name": "Titan",
-      "description": "Titan je zpustošená planeta, domov Thanose",
+      "description": "Titan je zpustošená planeta, domov Thanose.",
       "items": [
-        "kamen reality"
+
       ],
       "charactersAtLocation": [
         "thanos"
@@ -72,9 +70,9 @@
     {
       "id": "vormir",
       "name": "Vormir",
-      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť.",
+      "description": "Vormir je temná planeta, kde lze získat Kámen duše za nejvyšší oběť.Najdeš tu Red Skulla",
       "items": [
-        "kamen duse"
+
       ],
       "charactersAtLocation": [
         "redskull"
@@ -85,8 +83,7 @@
       "name": "Wakanda",
       "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania.",
       "items": [
-        "brneni",
-        "thorovo kladivo"
+
       ],
       "charactersAtLocation": [
         "blackpanther"
@@ -100,7 +97,7 @@
       "hp": 1,
       "dialogs": {
         "default": "Vojáku! New York je pod útokem, musíme zabezpečit civilisty. S čím ti můžu pomoci? (zbran / kamen / konec)",
-        "zbran": "Můj štít ti půjčit nemůžu, ale v troskách Stark Toweru najdeš prototypy zbraní. Budou se ti hodit proti armádě venku.",
+        "zbran": "Můj štít ti půjčit můžu,budeš ho potřebovat.",
         "kamen": "Kámen mysli je v rukou Lokiho armády. Jsou v centru města. Buď opatrný, nenech se ovládnout jeho mocí!"
       }
     },
@@ -120,7 +117,7 @@
       "hp": 1,
       "dialogs": {
         "default": "Vítej v Asgardu, příteli! Kámen reality je blízko, ale bariéra je silná. (bariera / kladivo / konec)",
-        "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!",
+        "bariera": "Magická bariéra nepustí nikoho, kdo nemá božskou sílu. Musíš mít mou zbraň!.Vrať se až ji budeš mít.",
         "kladivo": "Stormbreaker byl kovaný v srdci umírající hvězdy. Najdeš ho v Sokovii, tam kde proběhla bitva."
       }
     },
@@ -131,7 +128,7 @@
       "dialogs": {
         "default": "Wakanda tě vítá. Vidím, že tvůj boj je spravedlivý. Potřebuješ pomoc naší vědy? (brneni / vibranium / konec)",
         "brneni": "Naše brnění z Vibrania pohlcuje kinetickou energii. V Sokovii se ti bude hodit, tamní nepřátelé neznají slitování.",
-        "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna."
+        "vibranium": "Vibranium je nejcennější kov na Zemi. Střež ho dobře. Slyšel jsem, že na stanici Knowhere by za něj někdo dal i Kámen nekonečna.Můžu ti ještě dát Thorovo kladivo , ale budeš muset vyřešit příklad :\nsin² x + cos² x = "
       }
     },
     {
@@ -147,7 +144,7 @@
     {
       "id": "armada",
       "name": "Armáda",
-      "hp": 4,
+      "hp": 20,
       "dialogs" : {
         "default": " "
 
@@ -160,13 +157,13 @@
       "dialogs": {
         "default": "Mnozí sem přicházejí, ale málokdo odchází s tím, co hledá. (kamen / hadanka / konec)",
         "kamen": "Kámen duše vyžaduje oběť. Jsi připraven ztratit to, co miluješ?",
-        "hadanka": "Poslouchej dobře: Nemá to hlas, ale křičí to. Nemá to křídla, ale létá to. Co je to? (vitr)"
+        "hadanka": "Jsem malý, ale rychlý.\nPočítám víc než člověk.\nBeze mě by počítač nepřemýšlel.\nCo jsem ?"
       }
     },
     {
       "id": "lokiarmada",
       "name": "Lokiho armáda",
-      "hp": 2,
+      "hp": 10,
       "dialogs" : {
         "default": " "
 
@@ -175,7 +172,7 @@
     {
       "id": "thanos",
       "name": "Thanos",
-      "hp": 10,
+      "hp": 50,
       "dialogs": {
         "default": "Osud nelze oklamat. Máš všechny kameny? Ukaž mi svou sílu! (boj / proslov / konec)",
         "boj": "Zkus mě zasáhnout, pokud na to máš! Vesmír bude konečně v rovnováze.",
