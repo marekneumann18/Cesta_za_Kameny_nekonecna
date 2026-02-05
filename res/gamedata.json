@@ -155,7 +155,7 @@
     {
       "id": "armada",
       "name": "Armáda",
-      "hp": 10,
+      "hp": 20,
       "dialogs" : {
         "default": " "
 

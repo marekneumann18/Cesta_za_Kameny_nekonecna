@@ -24,7 +24,7 @@ public class Mluv extends Command {
     @Override
     public String execute() {
         System.out.println("S kym chces mluvit");
-        String character = sc.nextLine().toLowerCase().replaceAll(" ", "");
+        String character = sc.nextLine().toLowerCase().trim().replaceAll(" ", "");
         Location l = player.getCurrentLocation();
         if (l.getCharactersAtLocation().contains(character)) {
 
@@ -60,7 +60,7 @@ public class Mluv extends Command {
 
                                 }default -> System.out.println();
                             }
-                        } else if (question.equalsIgnoreCase("konec")) {
+                        } else if (question.equals("konec")) {
                             answer = true;
 
                         } else {

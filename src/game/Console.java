@@ -49,8 +49,6 @@ public class Console {
         String jmeno = scanner.nextLine();
         player.setName(jmeno);
         player.setCurrentLocation(data.getLocations().get(1));
-        System.out.println(player);
-        System.out.println(player.getItems());
         System.out.println("Nacházíš se v " + player.getCurrentLocation().getName());
         System.out.println(player.getCurrentLocation().getDescription());
 

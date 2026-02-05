@@ -144,12 +144,12 @@ public class Utok extends Command {
 
             } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("strilet")) {
                 if (ammoPlayer == 0) {
-                    System.out.println("Zásah! Vyhrál nepřítel.");
+                    System.out.println("Zásah! nepřítel ti ubral 1 hp.");
                     ammoEnemy--;
                     player.setHp(player.getHp() - 1);
 
                 } else if (ammoEnemy == 0) {
-                    System.out.println("Zasahl jsi ubral jsi mu 1 hp");
+                    System.out.println("Zasahl jsi, ubral jsi mu 1 hp");
                     ammoPlayer--;
                     ch.setHp(ch.getHp() - 1);
 
@@ -175,7 +175,7 @@ public class Utok extends Command {
             if (ch.getHp() == 0) {
                 System.out.println("Zabil jsi " + ch.getName());
                 ch.setDefeated(true);
-                if (ch.getName().equals("thanos")) {
+                if (ch.getId().equals("thanos")) {
                     gameOver = true;
                 }
                 end = true;
@@ -256,7 +256,7 @@ public class Utok extends Command {
     }
 
     public boolean hasInfinityStones() {
-        return player.getItems().contains("kamen moci") && player.getItems().contains("kamen reality") && player.getItems().contains("kamen casu") && player.getItems().contains("kamen duse") && player.getItems().contains("kamen prostoru") && player.getItems().contains("kamen mysli");
+        return player.getItems().contains("kamenmoci") && player.getItems().contains("kamenreality") && player.getItems().contains("kamencasu") && player.getItems().contains("kamenduse") && player.getItems().contains("kamenprostoru") && player.getItems().contains("kamenmysli");
     }
 
 
@@ -265,7 +265,7 @@ public class Utok extends Command {
         if (player.getHp() == 0) {
             return true;
         } else if (gameOver) {
-            System.out.println("Vyhrál jsi.Dokončil jsi celou hru\nDěkuju za hraní mé hry");
+            System.out.println("\nVyhrál jsi.Dokončil jsi celou hru\nDěkuju za hraní mé hry");
             return true;
 
         }
