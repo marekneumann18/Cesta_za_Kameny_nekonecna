@@ -30,13 +30,17 @@ public class Pouzij extends Command {
         for (Location l : data.getLocations()) {
             if (l.getUses().contains(use) && player.getCurrentLocation().equals(l)) {
                     if (use.equals("kod")) {
-                        System.out.println("Zadej kod :");
-                        String code = sc.nextLine();
-                        if (code.equals("1578")) {
-                            l.addItem("kamenprostoru");
-                            return "Správně odemkl jsi trezor a našel jsi kámen prostoru";
-                        }else{
-                            return  "Špatně zkus to třeba příště";
+                        boolean unlocked = false;
+                        if (!unlocked) {
+                            System.out.println("Zadej kod :");
+                            String code = sc.nextLine();
+                            if (code.equals("1578")) {
+                                l.addItem("kamenprostoru");
+                                unlocked = true;
+                                return "Správně odemkl jsi trezor a našel jsi kámen prostoru";
+                            } else {
+                                return "Špatně zkus to třeba příště";
+                            }
                         }
 
                     }else if (use.equals("stormbreaker") || use.equals("thorovokladivo")) {

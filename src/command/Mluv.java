@@ -8,8 +8,8 @@ import characters.Character;
 import java.util.Scanner;
 
 public class Mluv extends Command {
-    private static
-    Scanner sc = new Scanner(System.in);
+
+    private static Scanner sc = new Scanner(System.in);
     private GameData data;
     private Player player;
 

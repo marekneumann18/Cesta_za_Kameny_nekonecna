@@ -1,18 +1,19 @@
 package command;
 
+import characters.Character;
 import game.GameData;
 import location.Location;
 import player.Player;
-import characters.Character;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Utok extends Command {
-    Random rd = new Random();
-    Scanner sc = new Scanner(System.in);
+    private Random rd = new Random();
+    private Scanner sc = new Scanner(System.in);
     private Player player;
     private GameData gameData;
+    private boolean gameOver = false;
 
 
     public Utok(Player player, GameData gameData) {
@@ -24,6 +25,7 @@ public class Utok extends Command {
 
     @Override
     public String execute() {
+
         Character lokiArmada = gameData.characters.get(7);
         Character armada = gameData.characters.get(5);
         Character thanos = gameData.characters.get(8);
@@ -48,9 +50,7 @@ public class Utok extends Command {
 
             }
             case "Titan" -> {
-                if (!thanos.isDefeated()) {
-                    fightTitan(thanos);
-                }
+                fightTitan(thanos);
 
 
             }
@@ -78,6 +78,7 @@ public class Utok extends Command {
             ch.setHp(ch.getHp() - 5);
 
         }
+
         fight(ch);
         if (ch.isDefeated()) {
             System.out.println("Lezi tu kamen mysli");
@@ -88,8 +89,6 @@ public class Utok extends Command {
                 }
             }
         }
-
-
 
 
     }
@@ -104,19 +103,7 @@ public class Utok extends Command {
         boolean end = false;
         while (!end) {
             String choiseEnemy = volby[rd.nextInt(volby.length)];
-            String choisePlayer = "";
-
-            boolean input = false;
-            while (!input) {
-                System.out.println("Zadej volbu :");
-                choisePlayer = sc.next();
-                for (String s : volby) {
-                    if (s.equals(choisePlayer)) {
-                        input = true;
-                        break;
-                    }
-                }
-            }
+            String choisePlayer = this.choise(volby);
             System.out.println("Jeho volba " + choiseEnemy);
 
 
@@ -145,10 +132,10 @@ public class Utok extends Command {
                 ammoEnemy--;
                 System.out.println("Zásah! Ubral ti 1 hp.");
                 player.setHp(player.getHp() - 1);
-            } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("obrana")&& ammoPlayer > 0) {
+            } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("obrana") && ammoPlayer > 0) {
                 System.out.println("Střela zablokována.");
                 ammoPlayer--;
-            } else if (choisePlayer.equals("obrana") && choiseEnemy.equals("strilet")&& ammoEnemy > 0) {
+            } else if (choisePlayer.equals("obrana") && choiseEnemy.equals("strilet") && ammoEnemy > 0) {
                 System.out.println("Střela zablokována.");
                 ammoEnemy--;
 
@@ -185,6 +172,9 @@ public class Utok extends Command {
             if (ch.getHp() == 0) {
                 System.out.println("Zabil jsi " + ch.getName());
                 ch.setDefeated(true);
+                if (ch.getName().equals("thanos")) {
+                    gameOver = true;
+                }
                 end = true;
 
 
@@ -193,10 +183,24 @@ public class Utok extends Command {
                 System.out.println("Umřel jsi");
 
                 end = true;
+
             }
 
         }
 
+    }
+
+    public String choise(String choice[]) {
+        String choisePlayer = "";
+        while (true) {
+            System.out.println("Zadej volbu :");
+            choisePlayer = sc.next();
+            for (String s : choice) {
+                if (s.equals(choisePlayer)) {
+                    return choisePlayer;
+                }
+            }
+        }
     }
 
 
@@ -211,7 +215,7 @@ public class Utok extends Command {
         fight(ch);
         if (ch.isDefeated()) {
             System.out.println("Leží tu stormbreaker a kamen moci ");
-            for (Location l : gameData.locations) {
+            for (Location l : gameData.getLocations()) {
                 if (l.getName().equals("Sokovia")) {
                     l.addItem("stormbreaker");
                     l.addItem("kamen moci");
@@ -234,11 +238,10 @@ public class Utok extends Command {
             ch.setHp(ch.getHp() - 5);
 
         }
-        if(hasInfinityStones()){
+        if (hasInfinityStones()) {
             ch.setHp(ch.getHp() - 20);
         }
         fight(ch);
-        //TODO dodelat fight Thanos
 
 
     }
@@ -250,7 +253,15 @@ public class Utok extends Command {
 
     @Override
     public boolean exit() {
-        return player.getHp() == 0;
+        if (player.getHp() == 0) {
+            return true;
+        } else if (gameOver) {
+            System.out.println("Vyhrál jsi.Dokončil jsi celou hru\nDěkuju za hraní mé hry");
+            return true;
+
+        }
+        return false;
+
 
     }
 }
