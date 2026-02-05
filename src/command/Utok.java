@@ -83,7 +83,7 @@ public class Utok extends Command {
             System.out.println("Lezi tu kamen mysli");
             for (Location l : gameData.locations) {
                 if (l.getName().equals("New York City")) {
-                    l.addItem("kamen mysli");
+                    l.addItem("kamenmysli");
 
                 }
             }
@@ -250,11 +250,7 @@ public class Utok extends Command {
 
     @Override
     public boolean exit() {
-        if (player.getHp() == 0){
-            return true;
-        }else {
-            return false;
-        }
+        return player.getHp() == 0;
 
     }
 }

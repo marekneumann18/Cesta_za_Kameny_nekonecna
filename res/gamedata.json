@@ -21,7 +21,7 @@
       "name": "Avengers Tower",
       "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců. Nachází se zde Kámen Prostoru, pistol. Najdeš tu Iron mana",
       "items": [
-
+        "pistol"
 
       ],
       "charactersAtLocation": [
@@ -37,7 +37,7 @@
       "name": "Knowhere",
       "description": "Knowhere je nebezpečná vesmírná stanice, kde se nachází Kámen času.Najdeš tu obchodnika",
       "items": [
-        "lecive predmety"
+
       ],
       "charactersAtLocation": [
         "obchodnik"
