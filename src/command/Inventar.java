@@ -1,14 +1,12 @@
 package command;
 
-import player.Item;
+
 import player.Player;
 
-import java.util.ArrayList;
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class Inventar extends Command {
-    private ArrayList<Item> items;
     private Player player;
     private Scanner sc = new Scanner(System.in);
 
@@ -16,9 +14,7 @@ public class Inventar extends Command {
         this.player = player;
     }
 
-    public Inventar() {
-        items = new ArrayList<>();
-    }
+
 
 
     @Override
@@ -29,14 +25,17 @@ public class Inventar extends Command {
             return "Tvůj inventar : " + player.getItems();
         } else if (choise.equals("2")) {
             System.out.println("Jaký předmět chces zahodit :");
-            String item = sc.nextLine().toLowerCase().replace(" ", "");
+            String item = sc.nextLine().toLowerCase().trim().replace(" ", "");
             for (String item1 : player.getItems()) {
                 if (item1.equals(item)) {
+                    player.removeItem(item);
+                    player.getCurrentLocation().addItem(item);
                     return "Zahodil jsi " + item;
 
                 }
-                return "Takový předmět nemáš";
+
             }
+            return "Takový předmět nemáš";
 
         }
         return "Taková možnost není";
@@ -48,17 +47,8 @@ public class Inventar extends Command {
         return false;
     }
 
-    public ArrayList<Item> getItems() {
-        return items;
-    }
 
-    public void addItem(Item items) {
-        this.items.add(items);
-    }
 
-    public void removeItem(Item items) {
-        this.items.remove(items);
-        player.getCurrentLocation().addItem(items.getName());
-    }
+
 
 }

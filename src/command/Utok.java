@@ -224,7 +224,7 @@ public class Utok extends Command {
             for (Location l : gameData.getLocations()) {
                 if (l.getName().equals("Sokovia")) {
                     l.addItem("stormbreaker");
-                    l.addItem("kamen moci");
+                    l.addItem("kamenmoci");
 
                 }
             }

@@ -90,7 +90,7 @@
     {
       "id": "wakanda",
       "name": "Wakanda",
-      "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania. Najdeš tu Black panthera)",
+      "description": "Wakanda je technologicky vyspělá říše, kde lze získat silnou zbraň z vibrania. Najdeš tu Black panthera",
 
       "items": [
 
@@ -155,7 +155,7 @@
     {
       "id": "armada",
       "name": "Armáda",
-      "hp": 20,
+      "hp": 10,
       "dialogs" : {
         "default": " "
 

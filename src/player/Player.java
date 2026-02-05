@@ -10,13 +10,14 @@ public class Player {
     private int hp;
     private GameData gameData;
     private Location currentLocation;
-    private ArrayList<String> items = new ArrayList<>();
+    private ArrayList<String> items;
 
     public Player(String name, int hp, GameData gameData) {
         this.name = name;
         setHp(hp);
         this.gameData = gameData;
         this.currentLocation = getCurrentLocation();
+        items = new ArrayList<>();
 
     }
 
@@ -54,16 +55,12 @@ public class Player {
     }
 
     public void addItem(String item) {
-        if (items.size() < 8) {
-            this.items.add(item);
-        }else  {
-            System.out.println("Item nemůžeš přidat je plný");
-        }
 
+        items.add(item);
     }
 
     public void removeItem(String item) {
-        this.items.remove(item);
+        items.remove(item);
     }
 
     @Override

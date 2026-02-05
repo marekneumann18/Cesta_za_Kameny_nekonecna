@@ -10,12 +10,12 @@ public class Seber extends Command {
     Scanner sc = new Scanner(System.in);
     private Player player;
     private GameData data;
-    private Location location;
+
 
     public Seber(Player player, GameData data) {
         this.player = player;
         this.data = data;
-        location = player.getCurrentLocation();
+
     }
 
     @Override
@@ -26,10 +26,14 @@ public class Seber extends Command {
         for (Location l : data.locations) {
             if (l.getItems().contains(item)) {
                 if (player.getCurrentLocation().equals(l)) {
-                    player.addItem(item);
-                    l.removeItem(item);
-                    System.out.println(player.getItems());
-                    return "předmět byl přidan";
+                    if (player.getItems().size() < 9) {
+                        player.addItem(item);
+                        l.removeItem(item);
+                        System.out.println(player.getItems());
+                        return "předmět byl přidan";
+                    } else {
+                        return "Item nemůžeš přidat je plný";
+                    }
                 }
 
 
