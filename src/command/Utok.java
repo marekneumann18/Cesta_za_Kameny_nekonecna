@@ -71,7 +71,10 @@ public class Utok extends Command {
         if (player.getItems().contains("pistol")) {
             ch.setHp(ch.getHp() - 1);
         }
-        if (player.getItems().contains("thorovo kladivo")) {
+        if (player.getItems().contains("stit")) {
+            ch.setHp(ch.getHp() - 2);
+        }
+        if (player.getItems().contains("thorovokladivo")) {
             ch.setHp(ch.getHp() - 3);
         }
         if (player.getItems().contains("stormbreaker")) {
@@ -208,7 +211,10 @@ public class Utok extends Command {
         if (player.getItems().contains("pistol")) {
             ch.setHp(ch.getHp() - 1);
         }
-        if (player.getItems().contains("thorovo kladivo")) {
+        if (player.getItems().contains("stit")) {
+            ch.setHp(ch.getHp() - 3);
+        }
+        if (player.getItems().contains("thorovokladivo")) {
             ch.setHp(ch.getHp() - 5);
         }
 
@@ -231,11 +237,14 @@ public class Utok extends Command {
         if (player.getItems().contains("pistol")) {
             ch.setHp(ch.getHp() - 1);
         }
-        if (player.getItems().contains("thorovo kladivo")) {
+        if (player.getItems().contains("stit")) {
             ch.setHp(ch.getHp() - 3);
         }
-        if (player.getItems().contains("stormbreaker")) {
+        if (player.getItems().contains("thorovokladivo")) {
             ch.setHp(ch.getHp() - 5);
+        }
+        if (player.getItems().contains("stormbreaker")) {
+            ch.setHp(ch.getHp() - 8);
 
         }
         if (hasInfinityStones()) {

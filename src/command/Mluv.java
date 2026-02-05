@@ -102,7 +102,7 @@ public class Mluv extends Command {
     }
     public void speakBlackPanther(String question){
         switch (question) {
-            case "brneni" -> {
+            case "vibranium" -> {
                 if (!player.getItems().contains("brneni")) {
                     player.getCurrentLocation().addItem("brneni");
 

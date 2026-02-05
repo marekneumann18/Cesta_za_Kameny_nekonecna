@@ -10,6 +10,7 @@ public class Pouzij extends Command {
     private Player player;
     private GameData data;
     Scanner sc = new Scanner(System.in);
+    private boolean unlocked = false;
 
     public Pouzij(Player player, GameData data) {
         this.player = player;
@@ -30,7 +31,6 @@ public class Pouzij extends Command {
         for (Location l : data.getLocations()) {
             if (l.getUses().contains(use) && player.getCurrentLocation().equals(l)) {
                     if (use.equals("kod")) {
-                        boolean unlocked = false;
                         if (!unlocked) {
                             System.out.println("Zadej kod :");
                             String code = sc.nextLine();
@@ -41,14 +41,18 @@ public class Pouzij extends Command {
                             } else {
                                 return "Špatně zkus to třeba příště";
                             }
+                        }else {
+                            return "Trezor je už otevřený";
                         }
 
                     }else if (use.equals("stormbreaker") || use.equals("thorovokladivo")) {
                         if (!player.getItems().contains("kamenreality")) {
-                            System.out.println("Zničil jsi bariéru a našel jsi kámen reality");
+                            player.getCurrentLocation().addItem("kamenreality");
+
+                            return "Zničil jsi bariéru a našel jsi kámen reality";
 
                         }else{
-                            System.out.println("Bariéra je už zničená");
+                            return "Bariéra je už zničená";
                         }
 
                     }
