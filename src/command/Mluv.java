@@ -38,21 +38,27 @@ public class Mluv extends Command {
                         String question = sc.nextLine().toLowerCase().replaceAll(" ", "");
                         if (ch.getDialogs().containsKey(question)) {
                             System.out.println(ch.getName() + ": " + ch.getDialogs().get(question));
-                            if (ch.getId().equalsIgnoreCase("captainamerica") && question.equalsIgnoreCase("zbran")) {
-                                speakCaptain();
+                            switch (ch.getId()){
+                                case "captainamerica"->{
+                                    if (question.equals("zbran")){
+                                        speakCaptain();
+                                    }
 
-                            } else if (ch.getId().equalsIgnoreCase("redskull") && question.equalsIgnoreCase("hadanka")) {
-                               speakRedSkull();
-                                answer = true;
+                                }case "redskull"->{
+                                    if (question.equals("hadanka")){
+                                        speakRedSkull();
+                                        answer = true;
+                                    }
 
-                            } else if (ch.getId().equalsIgnoreCase("blackpanther")) {
-                                speakBlackPanther(question);
-                                answer = true;
-                            } else if (ch.getId().equalsIgnoreCase("obchodnik") ) {
-                                speakObchodnik(question);
+                                }case "blackpanther"->{
+                                    speakBlackPanther(question);
+                                    answer = true;
+
+                                }case "obchodnik"->{
+                                    speakObchodnik(question);
 
 
-
+                                }default -> System.out.println();
                             }
                         } else if (question.equalsIgnoreCase("konec")) {
                             answer = true;
@@ -63,12 +69,8 @@ public class Mluv extends Command {
 
                     }
                     return "Rozhovor ukončen";
-
-
                 }
-
             }
-
         }
         return "Daná postava  není v místnosti nebo neexistuje";
 
