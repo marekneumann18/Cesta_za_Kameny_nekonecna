@@ -1,22 +1,6 @@
 {
   "locations": [
     {
-      "id": "asgard",
-      "name": "Asgard",
-      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.Najdeš tu Thora",
-      "items": [
-
-      ],
-      "charactersAtLocation": [
-        "thor"
-      ],
-      "uses" : [
-        "stormbreaker",
-        "thorovokladivo"
-
-      ]
-    },
-    {
       "id": "avengerstower",
       "name": "Avengers Tower",
       "description": "Avengers Tower je hlavní základna hrdinů plná technologií a spojenců. Nachází se zde Kámen Prostoru, pistol. Najdeš tu Iron mana",
@@ -32,6 +16,23 @@
 
       ]
     },
+    {
+      "id": "asgard",
+      "name": "Asgard",
+      "description": "Asgard je majestátní říše bohů plná zlatých paláců a magie. Nachází se zde Kámen reality.Najdeš tu Thora",
+      "items": [
+
+      ],
+      "charactersAtLocation": [
+        "thor"
+      ],
+      "uses" : [
+        "stormbreaker",
+        "thorovokladivo"
+
+      ]
+    },
+
     {
       "id": "knowhere",
       "name": "Knowhere",

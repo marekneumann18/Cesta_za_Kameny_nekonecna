@@ -33,11 +33,7 @@ public class GameData {
         return locations;
     }
 
-    //    public GameData() {
-//        items = new ArrayList<>();
-//        characters = new ArrayList<>();
-//        locations = new ArrayList<>();
-//    }
+
 
 
     /**
@@ -51,7 +47,11 @@ public class GameData {
         ObjectMapper parser = new ObjectMapper();
 
         try {
-            InputStream input = new FileInputStream(resourcePath);
+            InputStream input = getClass().getResourceAsStream(resourcePath);
+            if (input == null) {
+                System.out.println("Soubor nebyl nalezen v resources!");
+                return;
+            }
             GameData data = parser.readValue(input, GameData.class);
 
             this.locations = data.locations;
@@ -64,18 +64,6 @@ public class GameData {
             System.out.println("nefunguje !");
         }
 
-
-//     * Finds a specific location by its identifier.
-//     * @param name the identifier of the location to be found
-//     * @return the matching location
-//     */
-//    public  Location findLocation(String name) {
-//        for (Location l : locations) {
-//            if (l.getName().equals(name)){
-//                return l;
-//            }
-//        }
-//        throw new IllegalArgumentException("Neexistuje lokace s id: " + id);
     }
 
     /**
