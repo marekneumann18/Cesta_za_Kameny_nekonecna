@@ -5,6 +5,11 @@ import location.Location;
 
 import java.util.ArrayList;
 
+/**
+ * Represents the player in the game.
+ * This class stores player information such as name, health, current location, and inventory.
+ * @author Marek
+ */
 public class Player {
     private String name;
     private int hp;
@@ -12,6 +17,12 @@ public class Player {
     private Location currentLocation;
     private ArrayList<String> items;
 
+    /**
+     * Constructs a new Player object.
+     * @param name The player's name.
+     * @param hp The player's initial health points.
+     * @param gameData The game data.
+     */
     public Player(String name, int hp, GameData gameData) {
         this.name = name;
         setHp(hp);
@@ -54,15 +65,27 @@ public class Player {
         this.currentLocation = currentLocation;
     }
 
+    /**
+     * Adds an item to the player's inventory.
+     * @param item The name of the item to add.
+     */
     public void addItem(String item) {
 
         items.add(item);
     }
 
+    /**
+     * Removes an item from the player's inventory.
+     * @param item The name of the item to remove.
+     */
     public void removeItem(String item) {
         items.remove(item);
     }
 
+    /**
+     * Returns a string representation of the Player object.
+     * @return A string containing the player's name, health, and current location.
+     */
     @Override
     public String toString() {
         return "Player{" +

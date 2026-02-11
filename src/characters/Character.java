@@ -2,6 +2,11 @@ package characters;
 
 import java.util.HashMap;
 
+/**
+ * Represents a character in the game.
+ * Each character has an ID, a name, health points, a defeated status, and a set of dialogs.
+ * @author Marek
+ */
 public class Character {
     private String id;
     private String name;
@@ -9,6 +14,9 @@ public class Character {
     private boolean isDefeated = false;
     private HashMap<String, String> dialogs;
 
+    /**
+     * Constructs a new, empty Character object.
+     */
     public Character() {
 
     }
@@ -53,6 +61,10 @@ public class Character {
         isDefeated = defeated;
     }
 
+    /**
+     * Returns a string representation of the Character object.
+     * @return A string containing the character's ID, name, and health points.
+     */
     @Override
     public String toString() {
         return "Postava{" +

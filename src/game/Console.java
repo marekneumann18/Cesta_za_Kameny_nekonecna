@@ -6,15 +6,22 @@ import player.Player;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * The Console class is responsible for handling user input and managing the game flow.
+ * It initializes the game data, processes commands, and interacts with the player.
+ * @author Marek
+ */
 public class Console {
     private GameData data;
     private Player player;
-
     private HashMap<String, Command> commands;
     private boolean exit = false;
     private Scanner scanner = new Scanner(System.in);
 
 
+    /**
+     * Initializes the game by loading game data, creating the player, and setting up commands.
+     */
     public void inicialization() {
         this.commands = new HashMap<>();
         this.player = new Player("", 20, data);
@@ -30,6 +37,9 @@ public class Console {
         commands.put("utok", new Utok(player, data));
     }
 
+    /**
+     * Reads and processes a command from the user.
+     */
     private void proved() {
         System.out.println();
         System.out.println("Zadej příkaz : (např. napoveda)");
@@ -43,6 +53,10 @@ public class Console {
         }
     }
 
+    /**
+     * Starts the game.
+     * It initializes the game, prompts the player for their name, and enters the main game loop.
+     */
     public void start() {
         inicialization();
         System.out.print("Zadej jméno: ");

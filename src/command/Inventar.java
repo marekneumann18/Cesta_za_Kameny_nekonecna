@@ -6,10 +6,19 @@ import player.Player;
 
 import java.util.Scanner;
 
+/**
+ * The Inventar class represents the "inventory" command.
+ * It allows the player to view their inventory and drop items.
+ * @author Marek
+ */
 public class Inventar extends Command {
     private Player player;
     private Scanner sc = new Scanner(System.in);
 
+    /**
+     * Constructs a new Inventar command.
+     * @param player The player object.
+     */
     public Inventar(Player player) {
         this.player = player;
     }
@@ -17,6 +26,11 @@ public class Inventar extends Command {
 
 
 
+    /**
+     * Executes the "inventory" command.
+     * It allows the player to either view their inventory or drop an item.
+     * @return A string describing the result of the action.
+     */
     @Override
     public String execute() {
         System.out.println("Co chceš udělat\n\n1) zobrazit inventář\n2) zahodit předmět ");
@@ -42,6 +56,10 @@ public class Inventar extends Command {
 
     }
 
+    /**
+     * The "inventory" command does not cause the game to exit.
+     * @return false.
+     */
     @Override
     public boolean exit() {
         return false;

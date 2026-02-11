@@ -9,6 +9,10 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+/**
+ * The GameData class represents the game's data, including characters and locations.
+ * It is responsible for loading this data from a JSON file.
+ */
 public class GameData {
 
     //    public ArrayList<Item> items = new ArrayList<>();
@@ -37,10 +41,9 @@ public class GameData {
 
 
     /**
-     * Loads game data from a JSON file.
+     * Loads game data from a JSON file at the given resource path.
      *
      * @param resourcePath path to the resource file
-     * @return a game.GameData object filled with the loaded data
      */
     public void loadGameDataFromResources(String resourcePath) {
 
@@ -75,6 +78,10 @@ public class GameData {
 //        throw new IllegalArgumentException("Neexistuje lokace s id: " + id);
     }
 
+    /**
+     * Returns a string representation of the GameData object.
+     * @return A string containing the characters and locations.
+     */
     @Override
     public String toString() {
         return "game.GameData{" +

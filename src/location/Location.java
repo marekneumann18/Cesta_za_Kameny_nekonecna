@@ -4,13 +4,23 @@ import player.Player;
 
 import java.util.ArrayList;
 
+/**
+ * Represents a location in the game.
+ * Each location has an ID, a name, a description, a list of items, a list of characters, and a list of usable objects.
+ * @author Marek
+ */
 public class Location {
-    private String id, name, description;
+    private String id;
+    private String name;
+    private String description;
     private ArrayList<String> items = new ArrayList<>();
     private ArrayList<String> charactersAtLocation = new ArrayList<>();
     private ArrayList<String> uses = new ArrayList<>();
 
 
+    /**
+     * Constructs a new, empty Location object.
+     */
     public Location() {
 
 
@@ -56,11 +66,19 @@ public class Location {
         this.items = items;
     }
 
+    /**
+     * Removes an item from the location.
+     * @param item The name of the item to remove.
+     */
     public void removeItem(String item) {
         items.remove(item);
 
     }
 
+    /**
+     * Adds an item to the location.
+     * @param item The name of the item to add.
+     */
     public void addItem(String item) {
         items.add(item);
 
@@ -74,6 +92,10 @@ public class Location {
         this.description = description;
     }
 
+    /**
+     * Returns a string representation of the Location object.
+     * @return A string containing the location's name, description, and items.
+     */
     @Override
     public String toString() {
         return "Location{" +

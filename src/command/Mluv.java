@@ -7,6 +7,11 @@ import characters.Character;
 
 import java.util.Scanner;
 
+/**
+ * The Mluv class represents the "talk" command.
+ * It allows the player to interact with characters in the game.
+ * @author Marek
+ */
 public class Mluv extends Command {
 
     private static Scanner sc = new Scanner(System.in);
@@ -14,6 +19,11 @@ public class Mluv extends Command {
     private Player player;
 
 
+    /**
+     * Constructs a new Mluv command.
+     * @param player The player object.
+     * @param data The game data.
+     */
     public Mluv(Player player, GameData data) {
         this.player = player;
         this.data = data;
@@ -21,6 +31,11 @@ public class Mluv extends Command {
     }
 
 
+    /**
+     * Executes the "talk" command.
+     * It allows the player to talk to a character in the current location and respond to their dialogs.
+     * @return A string indicating the end of the conversation.
+     */
     @Override
     public String execute() {
         System.out.println("S kym chces mluvit");
@@ -76,6 +91,10 @@ public class Mluv extends Command {
 
 
     }
+
+    /**
+     * Handles the conversation with Captain America.
+     */
     public void speakCaptain(){
         if (!player.getItems().contains("stit")) {
             player.getCurrentLocation().addItem("stit");
@@ -83,6 +102,10 @@ public class Mluv extends Command {
         }
 
     }
+
+    /**
+     * Handles the conversation with Red Skull.
+     */
     public void speakRedSkull(){
         if (!player.getItems().contains("kamenduse")) {
             String answerMystery = sc.next().toLowerCase();
@@ -100,6 +123,11 @@ public class Mluv extends Command {
             System.out.println("Kámen už máš.");
         }
     }
+
+    /**
+     * Handles the conversation with Black Panther.
+     * @param question The player's question.
+     */
     public void speakBlackPanther(String question){
         switch (question) {
             case "vibranium" -> {
@@ -127,6 +155,11 @@ public class Mluv extends Command {
             }
         }
     }
+
+    /**
+     * Handles the conversation with the Obchodnik.
+     * @param question The player's question.
+     */
     public void speakObchodnik(String question){
         if (question.equals("ukol")) {
             if (player.getItems().contains("brneni")) {
@@ -143,6 +176,10 @@ public class Mluv extends Command {
     }
 
 
+    /**
+     * The "talk" command does not cause the game to exit.
+     * @return false.
+     */
     @Override
     public boolean exit() {
         return false;
