@@ -27,7 +27,7 @@ public class Console {
 
         this.data = new GameData();
         data.loadGameDataFromResources("gamedata.json");
-        this.player = new Player("", 20, data);
+        this.player = new Player("", 20);
         commands.put("jdi", new Jdi(player, data));
         commands.put("inventar", new Inventar(player));
         commands.put("konechry", new KonecHry());

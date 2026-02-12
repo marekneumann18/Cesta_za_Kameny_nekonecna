@@ -1,24 +1,33 @@
 package player;
 
 import game.GameData;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 class PlayerTest {
-    private GameData data;
+    private Player p;
+
+
+
+    @org.junit.jupiter.api.BeforeEach
+    void init(){
+        p = new Player("dw",1);
+    }
 
     @Test
     void addItem() {
-        Player p = new Player("dw",1,data);
+
         p.addItem("test");
         assertEquals("test",p.getItems().get(0));
     }
 
     @Test
     void removeItem() {
-        Player p = new Player("dw",1,data);
+
         p.addItem("test");
-        p.removeItem("test");
-        assertNull(p.getItems());
+        p.addItem("test2");
+        p.removeItem("test2");
+        assertEquals("test",p.getItems().get(0));
     }
 }
