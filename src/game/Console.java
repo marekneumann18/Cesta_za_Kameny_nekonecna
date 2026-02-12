@@ -24,9 +24,10 @@ public class Console {
      */
     public void inicialization() {
         this.commands = new HashMap<>();
-        this.player = new Player("", 20, data);
+
         this.data = new GameData();
-        data.loadGameDataFromResources("res/gamedata.json");
+        data.loadGameDataFromResources("gamedata.json");
+        this.player = new Player("", 20, data);
         commands.put("jdi", new Jdi(player, data));
         commands.put("inventar", new Inventar(player));
         commands.put("konechry", new KonecHry());
@@ -62,7 +63,7 @@ public class Console {
         System.out.print("Zadej jméno: ");
         String jmeno = scanner.nextLine();
         player.setName(jmeno);
-        player.setCurrentLocation(data.getLocations().get(1));
+        player.setCurrentLocation(data.getLocations().get(0));
         System.out.println("Nacházíš se v " + player.getCurrentLocation().getName());
         System.out.println(player.getCurrentLocation().getDescription());
 
