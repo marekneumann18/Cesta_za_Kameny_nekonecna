@@ -14,6 +14,13 @@
       "uses" : [
         "kod"
 
+      ],
+      "neigbours" :
+      [
+        "newyorkcity",
+        "asgard",
+        "knowhere"
+
       ]
     },
     {
@@ -30,6 +37,12 @@
         "stormbreaker",
         "thorovokladivo"
 
+      ],
+      "neigbours" :
+      [
+        "avengerstower",
+        "sokovia"
+
       ]
     },
 
@@ -42,6 +55,12 @@
       ],
       "charactersAtLocation": [
         "obchodnik"
+      ],
+      "neigbours" :
+      [
+        "avengerstower",
+        "titan",
+        "vormir"
       ]
     },
     {
@@ -53,6 +72,10 @@
       ],
       "charactersAtLocation": [
         "captainamerica"
+      ],
+      "neigbours" :
+      [
+        "avengerstower", "wakanda"
       ]
     },
     {
@@ -63,6 +86,12 @@
 
       ],
       "charactersAtLocation": [
+
+      ],
+      "neigbours" :
+      [
+        "asgard",
+        "vormir"
 
       ]
     },
@@ -75,6 +104,10 @@
       ],
       "charactersAtLocation": [
         "thanos"
+      ],
+      "neigbours" :
+      [
+        "knowhere", "sokovia"
       ]
     },
     {
@@ -86,6 +119,11 @@
       ],
       "charactersAtLocation": [
         "redskull"
+      ],
+      "neigbours" :
+      [
+        "newyorkcity"
+
       ]
     },
     {
@@ -98,6 +136,10 @@
       ],
       "charactersAtLocation": [
         "blackpanther"
+      ],
+      "neigbours" :
+      [
+
       ]
     }
   ],

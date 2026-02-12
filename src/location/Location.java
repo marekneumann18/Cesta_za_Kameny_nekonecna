@@ -16,14 +16,15 @@ public class Location {
     private ArrayList<String> items = new ArrayList<>();
     private ArrayList<String> charactersAtLocation = new ArrayList<>();
     private ArrayList<String> uses = new ArrayList<>();
+    private ArrayList<String> neigbours = new ArrayList<>();
 
 
-    /**
-     * Constructs a new, empty Location object.
-     */
-    public Location() {
+    public ArrayList<String> getNeigbours() {
+        return neigbours;
+    }
 
-
+    public void setNeigbours(ArrayList<String> neigbours) {
+        this.neigbours = neigbours;
     }
 
     public ArrayList<String> getUses() {

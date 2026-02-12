@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private int hp;
-   ;
     private Location currentLocation;
     private ArrayList<String> items;
 
@@ -25,7 +24,6 @@ public class Player {
     public Player(String name, int hp) {
         this.name = name;
         setHp(hp);
-
         this.currentLocation = getCurrentLocation();
         items = new ArrayList<>();
 
@@ -36,9 +34,6 @@ public class Player {
         return items;
     }
 
-    public void setItems(ArrayList<String> items) {
-        this.items = items;
-    }
 
     public String getName() {
         return name;
@@ -69,7 +64,6 @@ public class Player {
      * @param item The name of the item to add.
      */
     public void addItem(String item) {
-
         items.add(item);
     }
 

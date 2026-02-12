@@ -35,10 +35,11 @@ public class Jdi extends Command {
     @Override
     public String execute() {
         while (true) {
-            System.out.println("Zadej lokaci , kam se chceš přemístit");
+            System.out.println("Zadej lokaci , kam se chceš přemístit :           možnosti  "  + player.getCurrentLocation().getNeigbours());
+
             String location = scanner.nextLine().toLowerCase().trim().replace(" ", "");
             for (Location l : data.getLocations()) {
-                if (l.getId().equalsIgnoreCase(location)) {
+                if (l.getId().equalsIgnoreCase(location) && player.getCurrentLocation().getNeigbours().contains(l.getId())) {
                     player.setCurrentLocation(l);
                     System.out.println(player);
                     System.out.println("Přesouváš se do lokace " + l.getName());

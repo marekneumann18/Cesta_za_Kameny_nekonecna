@@ -1,10 +1,9 @@
 package game;
 
+import characters.Character;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import location.Location;
-import characters.Character;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -15,14 +14,8 @@ import java.util.ArrayList;
  */
 public class GameData {
 
-    //    public ArrayList<Item> items = new ArrayList<>();
     public ArrayList<Character> characters = new ArrayList<>();
     public ArrayList<Location> locations = new ArrayList<>();
-
-
-//    public ArrayList<Item> getItems() {
-//        return items;
-//    }
 
     public ArrayList<Character> getCharacters() {
         return characters;
@@ -33,12 +26,6 @@ public class GameData {
         return locations;
     }
 
-    //    public GameData() {
-//        items = new ArrayList<>();
-//        characters = new ArrayList<>();
-//        locations = new ArrayList<>();
-//    }
-
 
     /**
      * Loads game data from a JSON file at the given resource path.
@@ -46,8 +33,6 @@ public class GameData {
      * @param resourcePath path to the resource file
      */
     public void loadGameDataFromResources(String resourcePath) {
-
-
         ObjectMapper parser = new ObjectMapper();
 
         try {
@@ -70,10 +55,6 @@ public class GameData {
 
     }
 
-    /**
-     * Returns a string representation of the GameData object.
-     * @return A string containing the characters and locations.
-     */
     @Override
     public String toString() {
         return "game.GameData{" +
