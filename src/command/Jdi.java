@@ -34,6 +34,7 @@ public class Jdi extends Command {
      */
     @Override
     public String execute() {
+
         while (true) {
             System.out.println("Zadej lokaci , kam se chceš přemístit :           možnosti  "  + player.getCurrentLocation().getNeigbours());
 
