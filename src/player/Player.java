@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private int hp;
-    private GameData gameData;
     private Location currentLocation;
     private ArrayList<String> items;
 
@@ -21,12 +20,10 @@ public class Player {
      * Constructs a new Player object.
      * @param name The player's name.
      * @param hp The player's initial health points.
-     * @param gameData The game data.
      */
-    public Player(String name, int hp, GameData gameData) {
+    public Player(String name, int hp) {
         this.name = name;
         setHp(hp);
-        this.gameData = gameData;
         this.currentLocation = getCurrentLocation();
         items = new ArrayList<>();
 
@@ -37,9 +34,6 @@ public class Player {
         return items;
     }
 
-    public void setItems(ArrayList<String> items) {
-        this.items = items;
-    }
 
     public String getName() {
         return name;
@@ -70,7 +64,6 @@ public class Player {
      * @param item The name of the item to add.
      */
     public void addItem(String item) {
-
         items.add(item);
     }
 
@@ -82,10 +75,7 @@ public class Player {
         items.remove(item);
     }
 
-    /**
-     * Returns a string representation of the Player object.
-     * @return A string containing the player's name, health, and current location.
-     */
+
     @Override
     public String toString() {
         return "Player{" +
