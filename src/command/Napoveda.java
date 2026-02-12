@@ -36,11 +36,11 @@ public class Napoveda extends Command {
                 "           │                    │\n" +
                 "           │                    │\n" +
                 "       " + to + " ────────── " + vo + "\n" +
-                "        /      \\                ▲\n" +
+                "        /      \\                |\n" +
                 "       /        \\               │\n" +
-                "   " + ny + "    " + kn + " ───────┘\n" +
-                "     │            ▲\n" +
-                "     │            │\n" +
+                "   " + ny + "    " + kn + " ────┘\n" +
+                "        │             |\n" +
+                "        │             │\n" +
                 "   " + wa + "     " + ti + "\n" +
                 "\n\n" +
                 "══ Legend: [ TEXT ] = Tvoje poloha ══\n"
