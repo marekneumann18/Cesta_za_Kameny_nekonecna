@@ -61,10 +61,6 @@ public class Character {
         isDefeated = defeated;
     }
 
-    /**
-     * Returns a string representation of the Character object.
-     * @return A string containing the character's ID, name, and health points.
-     */
     @Override
     public String toString() {
         return "Postava{" +

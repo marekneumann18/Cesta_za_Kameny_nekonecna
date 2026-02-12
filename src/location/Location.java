@@ -92,10 +92,6 @@ public class Location {
         this.description = description;
     }
 
-    /**
-     * Returns a string representation of the Location object.
-     * @return A string containing the location's name, description, and items.
-     */
     @Override
     public String toString() {
         return "Location{" +

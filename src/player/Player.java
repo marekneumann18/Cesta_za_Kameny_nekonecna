@@ -82,10 +82,7 @@ public class Player {
         items.remove(item);
     }
 
-    /**
-     * Returns a string representation of the Player object.
-     * @return A string containing the player's name, health, and current location.
-     */
+
     @Override
     public String toString() {
         return "Player{" +
