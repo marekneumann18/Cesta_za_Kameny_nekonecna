@@ -21,7 +21,6 @@ public class Napoveda extends Command {
     public String execute() {
         String id = player.getCurrentLocation().getId();
 
-        // Definice vzhledu lokací (pokud tam hráč je, ohraničíme ji [X])
         String as = id.equals("asgard") ? "[ ASGARD ]" : "  Asgard  ";
         String so = id.equals("sokovia") ? "[ SOKOVIA ]" : "  Sokovia ";
         String to = id.equals("avengerstower") ? "[ TOWER ]" : "  Tower   ";
