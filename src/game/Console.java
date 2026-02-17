@@ -3,6 +3,7 @@ package game;
 import command.*;
 import player.Player;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -62,6 +63,7 @@ public class Console {
     /**
      * Starts the game.
      * It initializes the game, prompts the player for their name, and enters the main game loop.
+     *
      */
     public void start() {
         inicialization();
@@ -83,6 +85,7 @@ public class Console {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
 
 
     }
