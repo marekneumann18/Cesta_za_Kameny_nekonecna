@@ -11,7 +11,7 @@ In this game, your character is just some newbie in *Avengers*.Your task is to f
 You can find some other stuff like **mjolnir**, **ℹstormbreaker** or **Captain America's shield**.  
 And some fight against **Hydra**, **Loki's army**.  
 In each location is one of the Marvel character you can speak (*except someone*) solve some mysteries and getting stuff from them.  
-If you get all 6 infinite stones ,you will be able to fight **Thanos** and win the game.  
+If you get all 6 infinite stones, you will be able to fight **Thanos** and win the game.  
 
 ## ❓How to play❓
 1. Firstly download jar file  [jackson-demo.jar](https://github.com/marekneumann18/Cesta_za_Kameny_nekonecna/raw/refs/heads/master/jackson-demo.jar)

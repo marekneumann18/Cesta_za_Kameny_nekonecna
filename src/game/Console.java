@@ -4,6 +4,7 @@ import command.*;
 import player.Player;
 
 import java.awt.*;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -25,7 +26,6 @@ public class Console {
             "\u001B[0m";
 
 
-
     /**
      * Initializes the game by loading game data, creating the player, and setting up commands.
      */
@@ -42,6 +42,7 @@ public class Console {
         commands.put("pouzij", new Pouzij(player, data));
         commands.put("seber", new Seber(player, data));
         commands.put("utok", new Utok(player, data));
+        commands.put("ulozit", new Ulozit(player));
     }
 
     /**
@@ -67,6 +68,16 @@ public class Console {
      */
     public void start() {
         inicialization();
+        try {
+
+            player = Ulozit.readFromFile("player.dat");
+
+
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
 
         player.setCurrentLocation(data.getLocations().get(0));
         System.out.println(BLUE + "nápověda : Všechno piš bez diakritiky" + RESET);
@@ -85,7 +96,6 @@ public class Console {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
 
 
     }

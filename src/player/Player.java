@@ -3,6 +3,7 @@ package player;
 import game.GameData;
 import location.Location;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  * This class stores player information such as name, health, current location, and inventory.
  * @author Marek
  */
-public class Player {
+public class Player implements Serializable {
     private String name;
     private int hp;
     private Location currentLocation;
