@@ -43,6 +43,8 @@ public class Console {
         commands.put("seber", new Seber(player, data));
         commands.put("utok", new Utok(player, data));
         commands.put("ulozit", new Ulozit(player));
+
+
     }
 
     /**
@@ -68,16 +70,15 @@ public class Console {
      */
     public void start() {
         inicialization();
-        try {
-
-            player = Ulozit.readFromFile("player.dat");
-
-
-        } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+//        try {
+//
+//
+//            player = Ulozit.readFromFile("player.dat");
+//
+//
+//        } catch (ClassNotFoundException | IOException e) {
+//            System.out.println("spatny");
+//        }
 
         player.setCurrentLocation(data.getLocations().get(0));
         System.out.println(BLUE + "nápověda : Všechno piš bez diakritiky" + RESET);

@@ -2,6 +2,7 @@ package location;
 
 import player.Player;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  * Each location has an ID, a name, a description, a list of items, a list of characters, and a list of usable objects.
  * @author Marek
  */
-public class Location {
+public class Location implements Serializable {
     private String id;
     private String name;
     private String description;

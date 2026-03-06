@@ -4,14 +4,14 @@ import player.Player;
 
 import java.io.*;
 
-public class Ulozit extends  Command{
+public class  Ulozit extends  Command{
     private Player player;
     public Ulozit(Player player) {
         this.player = player;
 
     }
 
-    public void writeToFile(String fileName) throws IOException {
+    public  void writeToFile(String fileName) throws IOException {
         ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream(fileName));
         stream.writeObject(this);
         stream.close();
@@ -32,7 +32,7 @@ public class Ulozit extends  Command{
 
         }
         catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("spatne");
         }
 
 
