@@ -19,7 +19,8 @@
       [
         "newyorkcity",
         "asgard",
-        "knowhere"
+        "knowhere",
+        "vormir"
 
       ]
     },
@@ -107,7 +108,7 @@
       ],
       "neigbours" :
       [
-        "knowhere", "sokovia"
+        "knowhere"
       ]
     },
     {
@@ -122,7 +123,10 @@
       ],
       "neigbours" :
       [
-        "newyorkcity"
+        "avengerstower",
+        "sokovia",
+        "knowhere"
+
 
       ]
     },
@@ -139,7 +143,7 @@
       ],
       "neigbours" :
       [
-
+      "newyorkcity"
       ]
     }
   ],
