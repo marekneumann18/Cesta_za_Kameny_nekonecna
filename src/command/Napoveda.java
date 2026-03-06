@@ -44,7 +44,11 @@ public class Napoveda extends Command {
                 "\n\n" +
                 "══ Legend: [ TEXT ] = Tvoje poloha ══\n"
                 + "\n" +
-         "Možné příkazy :\njdi {Asgard,New York City,Vormir,Avengers Tower,Titan,Knowhere,Wakanda,Sokovia}\nkonec hry\nmluv\nnapoveda\npouzij (např. stormbreaker nebo thorovo kladivo v lokaci Asgard, kod v Avengers Tower\nseber <predmet>\nutok, ulozit";
+         "Možné příkazy :" +
+                "\njdi {Asgard,New York City,Vormir,Avengers Tower,Titan,Knowhere,Wakanda,Sokovia}" +
+                "\nkonec hry\nmluv\nnapoveda" +
+                "\npouzij (např. stormbreaker nebo thorovo kladivo v lokaci Asgard, kod v Avengers Tower" +
+                "\nseber <predmet>\nutok\nulozit\ninventar";
     }
 
     /**

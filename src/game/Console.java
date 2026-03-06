@@ -87,6 +87,16 @@ public class Console {
         System.out.print("Zadej jméno: ");
         String jmeno = scanner.nextLine();
         player.setName(jmeno);
+        player.addItem("pistol");
+        player.addItem("brneni");
+        player.addItem("stormbreaker");
+        player.addItem("kamenduse");
+        player.addItem("kamenmoci");
+        player.addItem("kamenprostoru");
+        player.addItem("thorovokladivo");
+        player.addItem("kamenmysli");
+        player.addItem("stit");
+
 
 
         try {

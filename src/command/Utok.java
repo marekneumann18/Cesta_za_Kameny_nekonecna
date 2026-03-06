@@ -11,6 +11,7 @@ import java.util.Scanner;
 /**
  * The Utok class represents the "attack" command.
  * It handles the combat system in the game.
+ *
  * @author Marek
  */
 public class Utok extends Command {
@@ -23,7 +24,8 @@ public class Utok extends Command {
 
     /**
      * Constructs a new Utok command.
-     * @param player The player object.
+     *
+     * @param player   The player object.
      * @param gameData The game data.
      */
     public Utok(Player player, GameData gameData) {
@@ -36,6 +38,7 @@ public class Utok extends Command {
     /**
      * Executes the "attack" command.
      * It initiates a fight with a character in the current location, if possible.
+     *
      * @return An empty string, as the output is handled within the method.
      */
     @Override
@@ -83,6 +86,7 @@ public class Utok extends Command {
 
     /**
      * Handles the fight in New York City.
+     *
      * @param ch The character to fight.
      */
     public void fightNY(Character ch) {
@@ -117,11 +121,15 @@ public class Utok extends Command {
 
     /**
      * The main combat loop.
+     *
      * @param ch The character to fight.
      */
     public void fight(Character ch) {
         int ammoPlayer = 2;
         int ammoEnemy = 2;
+        String s = "strilet";
+        String o = "obrana";
+        String n = "nabijeni";
         String[] volby = {"nabijeni", "strilet", "obrana"};
         System.out.println("Bojuješ proti " + ch.getName());
         System.out.println("\nSystem hry: \nMas tri moznosti boje:\nnabijeni\nstrilet\nobrana ");
@@ -133,7 +141,7 @@ public class Utok extends Command {
             System.out.println("Jeho volba " + choiseEnemy);
 
 
-            if (choisePlayer.equals("strilet")) {
+            if (choisePlayer.equals(s)) {
                 if (ammoPlayer == 0) {
                     System.out.println("Nemáš náboje! Musíš nabíjet nebo bránit.");
 
@@ -142,30 +150,34 @@ public class Utok extends Command {
             }
 
 
-            if (choiseEnemy.equals("nabijeni")) {
+            if (choiseEnemy.equals(n)) {
                 ammoEnemy++;
             }
-            if (choisePlayer.equals("nabijeni")) {
+            if (choisePlayer.equals(n)) {
                 ammoPlayer++;
             }
 
 
-            if (choisePlayer.equals("strilet") && choiseEnemy.equals("nabijeni") && ammoPlayer > 0) {
+            if (choisePlayer.equals(s) && choiseEnemy.equals(n) && ammoPlayer > 0) {
                 ammoPlayer--;
                 System.out.println("Zásah! Ubral jsi nepriteli 1 hp.");
                 ch.setHp(ch.getHp() - 1);
-            } else if (choisePlayer.equals("nabijeni") && choiseEnemy.equals("strilet") && ammoEnemy > 0) {
+            } else if (choisePlayer.equals(n) && choiseEnemy.equals(s) && ammoEnemy > 0) {
                 ammoEnemy--;
                 System.out.println("Zásah! Ubral ti 1 hp.");
                 player.setHp(player.getHp() - 1);
-            } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("obrana") && ammoPlayer > 0) {
+            } else if (choisePlayer.equals(s) && choiseEnemy.equals(o) && ammoPlayer > 0) {
                 System.out.println("Střela zablokována.");
                 ammoPlayer--;
-            } else if (choisePlayer.equals("obrana") && choiseEnemy.equals("strilet") && ammoEnemy > 0) {
+            } else if (choisePlayer.equals(o) && choiseEnemy.equals(s) && ammoEnemy > 0) {
                 System.out.println("Střela zablokována.");
                 ammoEnemy--;
 
-            } else if (choisePlayer.equals("strilet") && choiseEnemy.equals("strilet")) {
+            } else if (choisePlayer.equals(s) && choiseEnemy.equals(s)) {
+                if (ammoPlayer == 0 && ammoEnemy == 0) {
+                    ammoEnemy--;
+                    ammoPlayer--;
+                }
                 if (ammoPlayer == 0) {
                     System.out.println("Zásah! nepřítel ti ubral 1 hp.");
                     ammoEnemy--;
@@ -218,6 +230,7 @@ public class Utok extends Command {
 
     /**
      * Prompts the player for their choice of action during combat.
+     *
      * @param choice The available choices.
      * @return The player's chosen action.
      */
@@ -237,6 +250,7 @@ public class Utok extends Command {
 
     /**
      * Handles the fight in Sokovia.
+     *
      * @param ch The character to fight.
      */
     public void fightSokovia(Character ch) {
@@ -267,6 +281,7 @@ public class Utok extends Command {
 
     /**
      * Handles the fight on Titan.
+     *
      * @param ch The character to fight.
      */
     public void fightTitan(Character ch) {
@@ -293,6 +308,7 @@ public class Utok extends Command {
 
     /**
      * Checks if the player has all the Infinity Stones.
+     *
      * @return true if the player has all the Infinity Stones, false otherwise.
      */
     public boolean hasInfinityStones() {
@@ -302,6 +318,7 @@ public class Utok extends Command {
 
     /**
      * Determines whether the "attack" command should cause the game to exit.
+     *
      * @return true if the player is dead or the game is over, false otherwise.
      */
     @Override
